@@ -1,6 +1,7 @@
 ﻿using API.Models;
 using API.Models.DTOs;
 using API.Repositories;
+using API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,7 +9,7 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize] // Требует валидный JWT токен
+[Authorize]
 public class ReferenceController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
@@ -16,24 +17,24 @@ public class ReferenceController : ControllerBase
     private readonly IEquipmentRepository _equipmentRepository;
     private readonly IDepartmentRepository _departmentRepository;
     private readonly IRoleRepository _roleRepository;
+    private readonly ITechCardRepository _techCardRepository;
 
     public ReferenceController(
         IProductRepository productRepository,
         IRawMaterialRepository rawMaterialRepository,
         IEquipmentRepository equipmentRepository,
         IDepartmentRepository departmentRepository,
-        IRoleRepository roleRepository)
+        IRoleRepository roleRepository,
+        ITechCardRepository techCardRepository)
     {
         _productRepository = productRepository;
         _rawMaterialRepository = rawMaterialRepository;
         _equipmentRepository = equipmentRepository;
         _departmentRepository = departmentRepository;
         _roleRepository = roleRepository;
+        _techCardRepository = techCardRepository;
     }
 
-    /// <summary>
-    /// Получить список всех продуктов (готовая продукция)
-    /// </summary>
     [HttpGet("products")]
     public async Task<IActionResult> GetProducts()
     {
@@ -50,9 +51,6 @@ public class ReferenceController : ControllerBase
         return Ok(new ApiResponse<IEnumerable<ProductDto>> { IsSuccess = true, Data = dtos });
     }
 
-    /// <summary>
-    /// Получить список сырья и компонентов
-    /// </summary>
     [HttpGet("materials")]
     public async Task<IActionResult> GetMaterials()
     {
@@ -69,9 +67,6 @@ public class ReferenceController : ControllerBase
         return Ok(new ApiResponse<IEnumerable<RawMaterialDto>> { IsSuccess = true, Data = dtos });
     }
 
-    /// <summary>
-    /// Получить список оборудования
-    /// </summary>
     [HttpGet("equipment")]
     public async Task<IActionResult> GetEquipment()
     {
@@ -88,9 +83,6 @@ public class ReferenceController : ControllerBase
         return Ok(new ApiResponse<IEnumerable<EquipmentDto>> { IsSuccess = true, Data = dtos });
     }
 
-    /// <summary>
-    /// Получить список подразделений
-    /// </summary>
     [HttpGet("departments")]
     public async Task<IActionResult> GetDepartments()
     {
@@ -104,9 +96,6 @@ public class ReferenceController : ControllerBase
         return Ok(new ApiResponse<IEnumerable<DepartmentDto>> { IsSuccess = true, Data = dtos });
     }
 
-    /// <summary>
-    /// Получить список ролей пользователей
-    /// </summary>
     [HttpGet("roles")]
     public async Task<IActionResult> GetRoles()
     {
@@ -118,5 +107,21 @@ public class ReferenceController : ControllerBase
             Description = r.Description
         });
         return Ok(new ApiResponse<IEnumerable<RoleDto>> { IsSuccess = true, Data = dtos });
+    }
+
+    [HttpGet("techcards/list")]
+    public async Task<IActionResult> GetTechCardsList()
+    {
+        var cards = await _techCardRepository.GetAllAsync();
+        var dtos = cards.Select(c => new TechCardListItemDto
+        {
+            Id = c.Id,
+            Name = c.Name,
+            Version = c.Version,
+            ProductName = c.ProductId.ToString(), // можно подтянуть имя через JOIN
+            Status = c.Status,
+            CreatedAt = c.CreatedAt
+        });
+        return Ok(new ApiResponse<IEnumerable<TechCardListItemDto>> { IsSuccess = true, Data = dtos });
     }
 }

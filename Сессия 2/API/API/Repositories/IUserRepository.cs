@@ -1,10 +1,10 @@
 ﻿using API.Models.Entities;
 
-namespace API.Repositories
+namespace API.Repositories.Interfaces;
+
+public interface IUserRepository
 {
-    public interface IUserRepository
-    {
-        Task<User?> GetUserByUsernameAsync(string username);
-        Task<int> CreateUserAsync(User user);
-    }
+    Task<User?> GetUserByUsernameAsync(string username);
+    Task<int> CreateUserAsync(User user);
+    Task<string?> GetRoleNameByUserIdAsync(int userId);  // добавить этот метод
 }

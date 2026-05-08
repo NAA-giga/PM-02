@@ -1,19 +1,17 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
-namespace API.Repositories
+
+namespace API.Repositories;
+
+public abstract class BaseRepository
 {
-    public abstract class BaseRepository
+    protected readonly string _connectionString;
+
+    protected BaseRepository(IConfiguration configuration)
     {
-        private readonly IConfiguration _configuration;
-        protected readonly string _connectionString;
-
-        protected BaseRepository(IConfiguration configuration)
-        {
-            _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("DefaultConnection")
-                ?? throw new InvalidOperationException("Connection string not found.");
-        }
-
-        protected IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+        _connectionString = configuration.GetConnectionString("DefaultConnection")
+            ?? throw new InvalidOperationException("Connection string not found.");
     }
+
+    protected IDbConnection CreateConnection() => new SqlConnection(_connectionString);
 }

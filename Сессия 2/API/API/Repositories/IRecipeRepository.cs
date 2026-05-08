@@ -5,6 +5,7 @@ namespace API.Repositories;
 
 public interface IRecipeRepository
 {
+    Task<IEnumerable<Recipe>> GetAllAsync(int? productId = null, string? status = null);
     Task<IEnumerable<Recipe>> GetAllAsync();
     Task<Recipe?> GetByIdAsync(int id);
     Task<RecipeResponseDto?> GetRecipeDetailsAsync(int id);

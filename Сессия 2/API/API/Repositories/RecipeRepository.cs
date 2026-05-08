@@ -239,4 +239,22 @@ public class RecipeRepository : BaseRepository, IRecipeRepository
         var count = await conn.ExecuteScalarAsync<int>(sql, new { ProductId = productId, ExcludeId = excludeRecipeId });
         return count > 0;
     }
+    public async Task<IEnumerable<Recipe>> GetAllAsync(int? productId = null, string? status = null)
+    {
+        using var conn = CreateConnection();
+        var sql = @"
+        SELECT r.*, p.Name as ProductName 
+        FROM Recipes r
+        JOIN Products p ON r.ProductId = p.Id
+        WHERE 1=1";
+
+        if (productId.HasValue)
+            sql += " AND r.ProductId = @ProductId";
+        if (!string.IsNullOrEmpty(status))
+            sql += " AND r.Status = @Status";
+
+        sql += " ORDER BY r.CreatedAt DESC";
+
+        return await conn.QueryAsync<Recipe>(sql, new { ProductId = productId, Status = status });
+    }
 }

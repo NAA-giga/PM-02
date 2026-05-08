@@ -1,64 +1,122 @@
 ﻿using API.Models;
 using API.Models.DTOs;
 using API.Models.Entities;
-using API.Repositories;
+using API.Repositories.Interfaces;
 using API.Services;
-using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-namespace API.Controllers
+
+namespace API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AuthController : ControllerBase
+    private readonly IUserRepository _userRepository;
+    private readonly ITokenService _tokenService;
+
+    public AuthController(IUserRepository userRepository, ITokenService tokenService)
     {
-        private readonly IUserRepository _userRepository;
-        private readonly ITokenService _tokenService;
+        _userRepository = userRepository;
+        _tokenService = tokenService;
+    }
 
-        public AuthController(IUserRepository userRepository, ITokenService tokenService)
-        {
-            _userRepository = userRepository;
-            _tokenService = tokenService;
-        }
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] UserLoginRequest request)
-        {
-            // ВРЕМЕННО: для тестирования JWT и API
-            if (request.Username == "admin" && request.Password == "admin")
+    /// <summary>
+    /// Вход пользователя в систему
+    /// </summary>
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] UserLoginRequest request)
+    {
+        if (request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+            return BadRequest(new ApiResponse<object>
             {
-                var token = _tokenService.GenerateToken("admin", 1, "Admin");
-                return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { Token = token } });
-            }
-                
-            // Оригинальная проверка (закомментирована до создания реального пользователя в БД)
-            // var user = await _userRepository.GetUserByUsernameAsync(request.Username);
-            // if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
-            //     return Unauthorized(...);
-            // var token = _tokenService.GenerateToken(user.Username, user.Id, "Operator");
+                IsSuccess = false,
+                ErrorMessage = "Не заполнены логин или пароль"
+            });
 
-            return Unauthorized(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Неверные учётные данные" });
-        }
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] UserRegisterRequest request)
-        {
-            // Проверка существования пользователя
-            var existing = await _userRepository.GetUserByUsernameAsync(request.Username);
-            if (existing != null)
-                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Учетная запись уже существует" });
-
-            var user = new User
+        var user = await _userRepository.GetUserByUsernameAsync(request.Username);
+        if (user == null)
+            return Unauthorized(new ApiResponse<object>
             {
-                Username = request.Username,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
-                FullName = request.FullName,
-                Email = request.Email,
-                RoleId = request.RoleId,          // обязательно
-                DepartmentId = request.DepartmentId, // обязательно
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow
-            };
-            var userId = await _userRepository.CreateUserAsync(user);
-            return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { UserId = userId } });
+                IsSuccess = false,
+                ErrorMessage = "Неверные учётные данные"
+            });
+
+        // Проверка пароля через BCrypt
+        bool passwordValid;
+        try
+        {
+            passwordValid = BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash);
         }
+        catch (Exception ex)
+        {
+            // Логируем ошибку хеширования (можно использовать ILogger)
+            return Unauthorized(new ApiResponse<object>
+            {
+                IsSuccess = false,
+                ErrorMessage = "Ошибка проверки пароля"
+            });
+        }
+
+        if (!passwordValid)
+            return Unauthorized(new ApiResponse<object>
+            {
+                IsSuccess = false,
+                ErrorMessage = "Неверные учётные данные"
+            });
+
+        // Получаем имя роли для включения в токен
+        var roleName = await _userRepository.GetRoleNameByUserIdAsync(user.Id);
+        if (string.IsNullOrEmpty(roleName)) roleName = "User";
+
+        var token = _tokenService.GenerateToken(user.Username, user.Id, roleName);
+
+        return Ok(new ApiResponse<object>
+        {
+            IsSuccess = true,
+            Data = new { Token = token, UserId = user.Id, Username = user.Username, Role = roleName }
+        });
+    }
+
+    /// <summary>
+    /// Регистрация нового пользователя (только для администратора)
+    /// </summary>
+    [HttpPost("register")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Register([FromBody] UserRegisterRequest request)
+    {
+        if (request == null || string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+            return BadRequest(new ApiResponse<object>
+            {
+                IsSuccess = false,
+                ErrorMessage = "Логин и пароль обязательны"
+            });
+
+        var existing = await _userRepository.GetUserByUsernameAsync(request.Username);
+        if (existing != null)
+            return BadRequest(new ApiResponse<object>
+            {
+                IsSuccess = false,
+                ErrorMessage = "Пользователь с таким логином уже существует"
+            });
+
+        var user = new User
+        {
+            Username = request.Username,
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+            FullName = request.FullName,
+            Email = request.Email,
+            RoleId = request.RoleId,
+            DepartmentId = request.DepartmentId,
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        var userId = await _userRepository.CreateUserAsync(user);
+        return Ok(new ApiResponse<object>
+        {
+            IsSuccess = true,
+            Data = new { UserId = userId }
+        });
     }
 }
-    
