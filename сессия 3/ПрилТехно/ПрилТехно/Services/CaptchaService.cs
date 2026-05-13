@@ -1,34 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
-using System.Runtime.Versioning;
-using System.Text;
 
 namespace ПрилТехно.Services
 {
-    [SupportedOSPlatform("windows")]
-    public static class CaptchaService
+    public class CaptchaService : ICaptchaService
     {
-        private static readonly Random _rand = Random.Shared;
+        private readonly Random _random = new Random();
 
-        public static (string Text, byte[] ImageBytes) GenerateCaptcha()
+        public (ImageSource CaptchaImage, string ExpectedAnswer) GenerateCaptcha()
         {
-            var text = _rand.Next(1000, 9999).ToString();
-            using var bmp = new Bitmap(150, 50);
-            using var g = Graphics.FromImage(bmp);
-            g.Clear(Color.White);
-            using var font = new Font("Arial", 18, FontStyle.Bold);
-            g.DrawString(text, font, Brushes.Blue, 10, 10);
-            for (int i = 0; i < 50; i++)
-                g.DrawLine(Pens.Gray, _rand.Next(bmp.Width), _rand.Next(bmp.Height),
-                                          _rand.Next(bmp.Width), _rand.Next(bmp.Height));
+            int a = _random.Next(10, 99);
+            int b = _random.Next(10, 99);
+            string expression = $"{a} + {b} = ?";
+            string answer = (a + b).ToString();
 
-            using var ms = new MemoryStream();
-            bmp.Save(ms, ImageFormat.Png);
-            return (text, ms.ToArray());
+            using (var bitmap = new Bitmap(200, 60))
+            using (var g = Graphics.FromImage(bitmap))
+            {
+                // Явно указываем System.Drawing.Color
+                g.Clear(System.Drawing.Color.LightGray);
+                using (var font = new Font("Arial", 16, FontStyle.Bold))
+                {
+                    // Явно указываем System.Drawing.Brushes
+                    g.DrawString(expression, font, System.Drawing.Brushes.Black, 10, 20);
+                }
+                // Шум
+                for (int i = 0; i < 30; i++)
+                {
+                    int x = _random.Next(bitmap.Width);
+                    int y = _random.Next(bitmap.Height);
+                    bitmap.SetPixel(x, y, System.Drawing.Color.Gray);
+                }
+
+                using (var ms = new MemoryStream())
+                {
+                    bitmap.Save(ms, ImageFormat.Png);
+                    ms.Seek(0, SeekOrigin.Begin);
+                    var image = new BitmapImage();
+                    image.BeginInit();
+                    image.StreamSource = ms;
+                    image.CacheOption = BitmapCacheOption.OnLoad;
+                    image.EndInit();
+                    return (image, answer);
+                }
+            }
         }
     }
-
 }

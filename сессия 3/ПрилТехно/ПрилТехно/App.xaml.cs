@@ -1,11 +1,14 @@
-﻿using System.Configuration;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Configuration;
 using System.Data;
+using System.Net.Http;
 using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using System.Windows.Navigation;
 using ПрилТехно.Services;
 using ПрилТехно.ViewModels;
 using ПрилТехно.Views;
+using INavigationService = ПрилТехно.Services.INavigationService;
+using NavigationService = ПрилТехно.Services.NavigationService;
 
 namespace ПрилТехно
 {
@@ -14,59 +17,84 @@ namespace ПрилТехно
     /// </summary>
     public partial class App : Application
     {
-        private readonly IHost _host;
+        public static IServiceProvider Services { get; private set; } = null!;
 
-        public App()
+        protected override void OnStartup(StartupEventArgs e)
         {
-            _host = Host.CreateDefaultBuilder()
-                .ConfigureServices((context, services) =>
+            try
+            {
+                base.OnStartup(e);
+
+                var services = new ServiceCollection();
+
+                // HTTP клиент с базовым адресом API
+                var httpClient = new HttpClient
                 {
-                    // Регистрация сервисов
-                    services.AddHttpClient<ApiService>(client =>
+                    BaseAddress = new Uri("http://localhost:5167/"),
+                    Timeout = TimeSpan.FromSeconds(30)
+                };
+                services.AddSingleton(httpClient);          // один HttpClient на всё приложение
+                services.AddSingleton<ApiClient>();
+
+                // Регистрация сервисов
+                services.AddSingleton<IAuthService, AuthService>();
+                services.AddSingleton<ICaptchaService, CaptchaService>();
+                services.AddSingleton<INavigationService, NavigationService>();
+                services.AddSingleton<IDialogService, DialogService>();
+
+                // ViewModels
+                services.AddTransient<LoginViewModel>();
+                services.AddTransient<MainViewModel>();
+                services.AddTransient<ProductsViewModel>();
+                services.AddTransient<RecipesViewModel>();
+                services.AddTransient<TechCardsViewModel>();
+                services.AddTransient<OrdersViewModel>();
+                services.AddTransient<BatchesViewModel>();
+                services.AddTransient<ExtruderViewModel>();
+                services.AddTransient<EventsViewModel>();
+                services.AddTransient<ReportsViewModel>();
+                services.AddTransient<DashboardViewModel>();
+                services.AddTransient<ProductsViewModel>();
+                services.AddTransient<ProductEditViewModel>();
+
+
+                // Views (singleton для окон)
+                services.AddTransient<LoginView>();
+                services.AddSingleton<MainWindow>();
+                services.AddSingleton<DashboardView>();
+                services.AddTransient<ProductsView>();
+                services.AddTransient<ProductEditView>();
+
+                Services = services.BuildServiceProvider();
+
+                var loginView = Services.GetRequiredService<LoginView>();
+                var mainWindow = Services.GetRequiredService<MainWindow>();
+
+                // Подписка на закрытие окна входа
+                loginView.Closed += (s, args) =>
+                {
+                    if (Services.GetRequiredService<IAuthService>().IsAuthenticated)
                     {
-                        client.BaseAddress = new Uri("http://localhost:5000/api/");
-                    });
-                    services.AddSingleton<CaptchaService>();
-
-                    // Регистрация окон
-                    services.AddTransient<LoginWindow>();
-                    services.AddTransient<MainWindow>();
-
-                    // Регистрация ViewModels (если используете MVVM)
-                    services.AddTransient<RecipesViewModel>();
-                    services.AddTransient<ProductsViewModel>();
-                    // ... остальные ViewModels
-
-                    // Регистрация Views (если нужно)
-                    services.AddTransient<RecipesView>();
-                    services.AddTransient<ProductsView>();
-                })
-                .Build();
-        }
-
-        protected override async void OnStartup(StartupEventArgs e)
-        {
-            await _host.StartAsync();
-
-            var login = _host.Services.GetRequiredService<LoginWindow>();
-            if (login.ShowDialog() == true)
-            {
-                var main = _host.Services.GetRequiredService<MainWindow>();
-                main.Show();
+                        var mainVm = Services.GetRequiredService<MainViewModel>();
+                        mainWindow.DataContext = mainVm;
+                        mainWindow.Show();
+                    }
+                    else
+                    {
+                        Shutdown(); // если не авторизован, выходим
+                    }
+                };
+                loginView.ShowDialog();
             }
-            else
+            catch (Exception ex)
             {
-                Shutdown();
+                MessageBox.Show($"Ошибка при запуске:\n{ex.Message}\n\n{ex.StackTrace}",
+                "Критическая ошибка",
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
+                Environment.Exit(1);
             }
-
-            base.OnStartup(e);
-        }
-
-        protected override async void OnExit(ExitEventArgs e)
-        {
-            await _host.StopAsync();
-            _host.Dispose();
-            base.OnExit(e);
         }
     }
+
 }

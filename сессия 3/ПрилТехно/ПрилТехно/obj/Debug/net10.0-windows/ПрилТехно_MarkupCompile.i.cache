@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\23П-2\PM-02\сессия 2\ПрилТехно\ПрилТехно\obj\Debug\net10.0-windows\
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрилТехно\obj\Debug\net10.0-windows\
 ПрилТехно
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\23П-2\PM-02\сессия 2\ПрилТехно\ПрилТехно\App.xaml
-2-302217458
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрилТехно\App.xaml
+12-1235250937
 
-10-31746932
-235-614291293
-MainWindow.xaml;Views\RecipesView.xaml;
+44-2079124009
+220890166960
+Views\BatchesView.xaml;Views\DashboardView.xaml;Views\EventsView.xaml;Views\ExtruderView.xaml;Views\LoginView.xaml;Views\MainWindow.xaml;Views\OrdersView.xaml;Views\ProductEditView.xaml;Views\ProductsView.xaml;Views\RecipesView.xaml;Views\ReportsView.xaml;Views\TechCardsView.xaml;
 
-True
+False
 

@@ -9,27 +9,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ПрилТехно.Services;
-using ПрилТехно.ViewModels;
 
 namespace ПрилТехно.Views
 {
     /// <summary>
     /// Логика взаимодействия для RecipesView.xaml
     /// </summary>
-    public partial class RecipesView : Window
+    public partial class RecipesView : UserControl
     {
-        public RecipesView(ApiService api)
+        public RecipesView()
         {
             InitializeComponent();
-            DataContext = new RecipesViewModel(api);
-
-            // Автоматическая загрузка данных при появлении контрола
-            Loaded += async (s, e) =>
-            {
-                if (DataContext is RecipesViewModel vm && vm.LoadDataCommand.CanExecute(null))
-                    await vm.LoadDataCommand.ExecuteAsync(null);
-            };
         }
     }
 }
