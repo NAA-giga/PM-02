@@ -67,6 +67,7 @@ builder.Services.AddScoped<IQualityTestRepository, QualityTestRepository>();
 builder.Services.AddScoped<IDeviationRepository, DeviationRepository>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IRawMaterialRepository, RawMaterialRepository>();
+builder.Services.AddScoped<IExtruderProgramRepository, ExtruderProgramRepository>();
 
 // ============================================================
 // 3. Регистрация сервисов

@@ -11,6 +11,6 @@ namespace ПрилТехно.Models
         public string Name { get; set; } = string.Empty;
         public string ProductType { get; set; } = string.Empty;
         public string FormType { get; set; } = string.Empty;
-        public string Status { get; set; } = string.Empty; // "active" или "archived"
+        public string Status { get; set; } = string.Empty;
     }
 }

@@ -42,15 +42,14 @@ public class AuthController : ControllerBase
                 ErrorMessage = "Неверные учётные данные"
             });
 
-        // Проверка пароля через BCrypt
+        // Проверка пароля (временно прямое сравнение)
         bool passwordValid;
         try
         {
-            passwordValid = BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash);
+            passwordValid = (request.Password == user.PasswordHash);
         }
-        catch (Exception ex)
+        catch
         {
-            // Логируем ошибку хеширования (можно использовать ILogger)
             return Unauthorized(new ApiResponse<object>
             {
                 IsSuccess = false,
@@ -69,12 +68,35 @@ public class AuthController : ControllerBase
         var roleName = await _userRepository.GetRoleNameByUserIdAsync(user.Id);
         if (string.IsNullOrEmpty(roleName)) roleName = "User";
 
+        // Генерируем JWT токен
         var token = _tokenService.GenerateToken(user.Username, user.Id, roleName);
 
+        // Получаем полный профиль пользователя (включая фото в Base64)
+        var profile = await _userRepository.GetUserProfileAsync(user.Id);
+        if (profile == null)
+        {
+            // На случай, если профиль не собрался – создаём минимальный
+            profile = new UserProfileDto
+            {
+                Id = user.Id,
+                Username = user.Username,
+                FullName = user.FullName,
+                Email = user.Email,
+                Role = roleName,
+                Department = "",
+                PhotoBase64 = null
+            };
+        }
+
+        // Возвращаем токен и данные пользователя
         return Ok(new ApiResponse<object>
         {
             IsSuccess = true,
-            Data = new { Token = token, UserId = user.Id, Username = user.Username, Role = roleName }
+            Data = new
+            {
+                Token = token,
+                User = profile
+            }
         });
     }
 
@@ -107,7 +129,7 @@ public class AuthController : ControllerBase
             FullName = request.FullName,
             Email = request.Email,
             RoleId = request.RoleId,
-            DepartmentId = request.DepartmentId,
+            DepartmentId = request.DepartmentId,    
             IsActive = true,
             CreatedAt = DateTime.UtcNow
         };

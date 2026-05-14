@@ -56,14 +56,24 @@ namespace ПрилТехно
                 services.AddTransient<DashboardViewModel>();
                 services.AddTransient<ProductsViewModel>();
                 services.AddTransient<ProductEditViewModel>();
-
+                services.AddTransient<ComponentEditViewModel>();
+                services.AddTransient<RecipeEditViewModel>();
+                services.AddTransient<TechCardEditViewModel>();
+                services.AddTransient<TechCardEditView>();
+                services.AddTransient<StepEditViewModel>();
 
                 // Views (singleton для окон)
                 services.AddTransient<LoginView>();
-                services.AddSingleton<MainWindow>();
-                services.AddSingleton<DashboardView>();
+                services.AddTransient<MainWindow>();
+                services.AddTransient<DashboardView>();
                 services.AddTransient<ProductsView>();
                 services.AddTransient<ProductEditView>();
+                services.AddTransient<RecipeEditView>();
+                services.AddTransient<TechCardsView>();
+                services.AddTransient<StepEditView>();
+                services.AddTransient<ReportsView>();
+
+                services.AddTransient<ComponentEditView>();
 
                 Services = services.BuildServiceProvider();
 

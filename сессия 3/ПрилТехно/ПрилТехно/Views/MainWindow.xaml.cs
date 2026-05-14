@@ -27,6 +27,7 @@ namespace ПрилТехно
             navigationService.Initialize(MainContent);
             // По умолчанию открываем Dashboard
             navigationService.NavigateTo<DashboardView, DashboardViewModel>();
+
         }
     }
 }

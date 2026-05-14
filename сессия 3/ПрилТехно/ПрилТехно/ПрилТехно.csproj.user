@@ -5,6 +5,9 @@
     <Compile Update="Views\BatchesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ComponentEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DashboardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -26,10 +29,19 @@
     <Compile Update="Views\ProductsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\RecipeEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\RecipesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ReportsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\StepEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TechCardEditView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\TechCardsView.xaml.cs">

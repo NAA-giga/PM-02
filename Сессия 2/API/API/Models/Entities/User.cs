@@ -35,5 +35,8 @@ namespace API.Models.Entities
 
         [Column("last_login")]
         public DateTime? LastLogin { get; set; }
+
+        [Column("photo")]
+        public byte[]? Photo { get; set; }
     }
 }

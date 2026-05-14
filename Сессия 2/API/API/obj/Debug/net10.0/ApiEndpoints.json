@@ -90,6 +90,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "GetAll",
+    "RelativePath": "api/ExtruderPrograms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "Create",
+    "RelativePath": "api/ExtruderPrograms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.ExtruderProgramDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "GetById",
+    "RelativePath": "api/ExtruderPrograms/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "Update",
+    "RelativePath": "api/ExtruderPrograms/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.ExtruderProgramDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "Delete",
+    "RelativePath": "api/ExtruderPrograms/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.LaboratoryController",
     "Method": "Decide",
     "RelativePath": "api/Laboratory/decide",
@@ -269,9 +348,30 @@
   },
   {
     "ContainingType": "API.Controllers.ProductionOrdersController",
-    "Method": "Cancel",
-    "RelativePath": "api/ProductionOrders/{id}/cancel",
-    "HttpMethod": "POST",
+    "Method": "Update",
+    "RelativePath": "api/ProductionOrders/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.UpdateProductionOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ProductionOrdersController",
+    "Method": "Delete",
+    "RelativePath": "api/ProductionOrders/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -285,15 +385,20 @@
   },
   {
     "ContainingType": "API.Controllers.ProductionOrdersController",
-    "Method": "Confirm",
-    "RelativePath": "api/ProductionOrders/{id}/confirm",
-    "HttpMethod": "POST",
+    "Method": "ChangeStatus",
+    "RelativePath": "api/ProductionOrders/{id}/status",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.ChangeOrderStatusDto",
         "IsRequired": true
       }
     ],
@@ -492,27 +597,6 @@
   },
   {
     "ContainingType": "API.Controllers.RecipesController",
-    "Method": "ChangeStatus",
-    "RelativePath": "api/Recipes/{id}/status",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "newStatus",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Controllers.RecipesController",
     "Method": "AddComponent",
     "RelativePath": "api/Recipes/{recipeId}/components",
     "HttpMethod": "POST",
@@ -525,7 +609,7 @@
         "IsRequired": true
       },
       {
-        "Name": "component",
+        "Name": "dto",
         "Type": "API.Models.DTOs.RecipeComponentDto",
         "IsRequired": true
       }
@@ -546,7 +630,7 @@
         "IsRequired": true
       },
       {
-        "Name": "component",
+        "Name": "dto",
         "Type": "API.Models.DTOs.RecipeComponentDto",
         "IsRequired": true
       }
@@ -611,6 +695,59 @@
   },
   {
     "ContainingType": "API.Controllers.ReferenceController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Reference/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productDto",
+        "Type": "API.Models.DTOs.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ReferenceController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Reference/products/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productDto",
+        "Type": "API.Models.DTOs.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ReferenceController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Reference/products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ReferenceController",
     "Method": "GetRoles",
     "RelativePath": "api/Reference/roles",
     "HttpMethod": "GET",
@@ -636,7 +773,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -657,6 +805,27 @@
   },
   {
     "ContainingType": "API.Controllers.TechCardsController",
+    "Method": "AddStep",
+    "RelativePath": "api/TechCards/{cardId}/steps",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cardId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.CreateTechStepDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.TechCardsController",
     "Method": "GetById",
     "RelativePath": "api/TechCards/{id}",
     "HttpMethod": "GET",
@@ -666,6 +835,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.TechCardsController",
+    "Method": "Update",
+    "RelativePath": "api/TechCards/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.UpdateTechCardDto",
         "IsRequired": true
       }
     ],
@@ -701,6 +891,53 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.TechCardsController",
+    "Method": "UpdateStep",
+    "RelativePath": "api/TechCards/steps/{stepId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stepId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.CreateTechStepDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.TechCardsController",
+    "Method": "DeleteStep",
+    "RelativePath": "api/TechCards/steps/{stepId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stepId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.UsersController",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/Users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

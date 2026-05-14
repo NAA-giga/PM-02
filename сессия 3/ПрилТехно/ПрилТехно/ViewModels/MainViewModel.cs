@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Linq;
 using System.Windows;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using ПрилТехно.Services;
 using ПрилТехно.Views;
@@ -82,19 +82,15 @@ namespace ПрилТехно.ViewModels
 
         private void Logout()
         {
-            // Подтверждение выхода (опционально)
             var result = MessageBox.Show("Вы уверены, что хотите выйти?", "Подтверждение",
                                          MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result != MessageBoxResult.Yes) return;
 
-            // Очищаем данные авторизации
             _authService.Logout();
 
-            // Создаём НОВОЕ окно входа через DI
             var loginView = App.Services.GetRequiredService<LoginView>();
             loginView.Show();
 
-            // Закрываем текущее главное окно
             Application.Current.Windows.OfType<MainWindow>().FirstOrDefault()?.Close();
         }
     }

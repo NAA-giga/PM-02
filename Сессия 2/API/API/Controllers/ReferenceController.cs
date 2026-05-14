@@ -1,5 +1,6 @@
 ﻿using API.Models;
 using API.Models.DTOs;
+using API.Models.Entities;
 using API.Repositories;
 using API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -123,5 +124,56 @@ public class ReferenceController : ControllerBase
             CreatedAt = c.CreatedAt
         });
         return Ok(new ApiResponse<IEnumerable<TechCardListItemDto>> { IsSuccess = true, Data = dtos });
+    }
+    [HttpPost("products")]
+    [Authorize(Roles = "Technologist,admin")]
+    public async Task<IActionResult> CreateProduct([FromBody] ProductDto productDto)
+    {
+        if (productDto == null || string.IsNullOrWhiteSpace(productDto.Code) || string.IsNullOrWhiteSpace(productDto.Name))
+            return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Код и наименование обязательны" });
+
+        var product = new Product
+        {
+            Code = productDto.Code,
+            Name = productDto.Name,
+            ProductType = productDto.ProductType,
+            FormType = productDto.FormType,
+            Status = "active"
+        };
+        var id = await _productRepository.CreateAsync(product);
+        return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { Id = id } });
+    }
+
+    [HttpPut("products/{id}")]
+    [Authorize(Roles = "Technologist,admin")]
+    public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDto productDto)
+    {
+        if (productDto == null || id != productDto.Id)
+            return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "ID в запросе и теле не совпадают" });
+
+        var existing = await _productRepository.GetByIdAsync(id);
+        if (existing == null)
+            return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Продукт не найден" });
+
+        existing.Code = productDto.Code;
+        existing.Name = productDto.Name;
+        existing.ProductType = productDto.ProductType;
+        existing.FormType = productDto.FormType;
+        existing.Status = productDto.Status; // "active" или "archived"
+        var success = await _productRepository.UpdateAsync(existing);
+        if (!success)
+            return StatusCode(500, new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Ошибка обновления" });
+
+        return Ok(new ApiResponse<object> { IsSuccess = true });
+    }
+
+    [HttpDelete("products/{id}")]
+    [Authorize(Roles = "Technologist,admin")]
+    public async Task<IActionResult> DeleteProduct(int id)
+    {
+        var success = await _productRepository.ArchiveAsync(id);
+        if (!success)
+            return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Продукт не найден" });
+        return Ok(new ApiResponse<object> { IsSuccess = true });
     }
 }

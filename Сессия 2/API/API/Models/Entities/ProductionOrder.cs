@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// API/Models/Entities/ProductionOrder.cs
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace API.Models.Entities
 {
     [Table("production_orders")]
     public class ProductionOrder
     {
-        [Key]
+        [Column("id")]
         public int Id { get; set; }
 
         [Column("order_number")]
@@ -24,7 +25,7 @@ namespace API.Models.Entities
         public decimal PlannedQuantityKg { get; set; }
 
         [Column("status")]
-        public string Status { get; set; } = "draft";
+        public string Status { get; set; } = "draft"; // draft, confirmed, in_progress, completed, cancelled
 
         [Column("planned_start_date")]
         public DateTime PlannedStartDate { get; set; }

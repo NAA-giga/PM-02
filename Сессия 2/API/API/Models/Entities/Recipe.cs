@@ -5,7 +5,7 @@ namespace API.Models.Entities
     [Table("recipes")]
     public class Recipe
     {
-        [Key]
+        [Column("id")]
         public int Id { get; set; }
 
         [Column("product_id")]
@@ -30,9 +30,9 @@ namespace API.Models.Entities
         public int CreatedBy { get; set; }
 
         [Column("created_at")]
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; }
 
         [Column("updated_at")]
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; }
     }
 }

@@ -17,12 +17,14 @@ namespace API.Services
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new List<Claim>
-        {
-            new(JwtRegisteredClaimNames.Sub, username),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new(ClaimTypes.NameIdentifier, userId.ToString()),
-            new(ClaimTypes.Role, role)
-        };
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, username),        // subject = username
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim(ClaimTypes.NameIdentifier, userId.ToString()), // ← ТОЛЬКО userId
+        new Claim(ClaimTypes.Role, role)
+    };
+
+            // Убедитесь, что больше нигде не добавляется ClaimTypes.NameIdentifier
 
             var token = new JwtSecurityToken(
                 issuer: jwtSettings["Issuer"],
