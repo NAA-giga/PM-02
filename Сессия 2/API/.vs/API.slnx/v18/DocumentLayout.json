@@ -3,6 +3,134 @@
   "WorkspaceRootPath": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\productionbatchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\productionbatchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\laboratorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\laboratorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\deviationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\deviationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\createeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\createeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\extrudertelemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\extrudertelemetrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\extruderprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\extruderprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iextrudertelemetryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iextrudertelemetryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\extrudertelemetryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\extrudertelemetryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\createextruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\createextruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\extruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\extruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\extrudertelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\extrudertelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\extruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\extruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iextruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iextruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\zoneparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\zoneparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\batchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\batchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\ibatchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\ibatchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\productionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\productionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iproductionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iproductionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\performstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\performstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\startproductionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\startproductionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\batchstepexecutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\batchstepexecutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\productionbatchdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\productionbatchdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\productionorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\productionorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -95,10 +223,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\extruderprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\extruderprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\reciperesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\reciperesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -109,10 +233,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\createrecipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,14 +263,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iproductionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iproductionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\extruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\extruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -159,24 +271,8 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iextruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iextruderprogramrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\zoneparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\zoneparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\extruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\extruderprogramdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -219,10 +315,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\qualitytestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\productionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\productionbatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -233,10 +325,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iqualitytestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\iqualitytestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\ieventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\iequipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -251,14 +339,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\ibatchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\ibatchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\equipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -269,10 +349,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\batchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositories\\batchstepexecutionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -339,16 +415,8 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\extrudertelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\extrudertelemetry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\extruderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\extruderprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\entities\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -387,10 +455,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\techcardlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\startproductionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\startproductionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -421,10 +485,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\productionbatchresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\productionbatchresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\performstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\performstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\laboratorydecisiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -459,10 +519,6 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\createqualitytestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\batchstepexecutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\batchstepexecutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\models\\dtos\\batchreportitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\dtos\\batchreportitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -479,32 +535,12 @@
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\qualitytestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\productionbatchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\productionbatchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\laboratorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\laboratorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\controllers\\deviationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\deviationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\api\\api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -514,7 +550,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -527,32 +563,422 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ChangeOrderStatusDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABXAAAAAAAAAA==",
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "API\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:04:09.321Z",
+              "WhenOpened": "2026-05-08T07:28:00.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateProductionOrderDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ProductionBatchesController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionBatchesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ProductionBatchesController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionBatchesController.cs",
+              "RelativeToolTip": "API\\Controllers\\ProductionBatchesController.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAA9wI4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:03:49.862Z",
+              "WhenOpened": "2026-05-08T07:26:04.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DeviationsController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\DeviationsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\DeviationsController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\DeviationsController.cs",
+              "RelativeToolTip": "API\\Controllers\\DeviationsController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA2wCcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:27:45.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LaboratoryController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\LaboratoryController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\LaboratoryController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\LaboratoryController.cs",
+              "RelativeToolTip": "API\\Controllers\\LaboratoryController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAqwEYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:27:10.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEventRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IEventRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\IEventRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IEventRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\IEventRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:16:38.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EventRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\EventRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\EventRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\EventRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\EventRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:20:04.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EventService.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Services\\EventService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\EventService.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Services\\EventService.cs",
+              "RelativeToolTip": "API\\Services\\EventService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwB0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:51:53.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateEventDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateEventDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateEventDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateEventDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\CreateEventDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:50:31.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\EventDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\EventDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\EventDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\EventDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:50:16.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExtruderTelemetryController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderTelemetryController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ExtruderTelemetryController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderTelemetryController.cs",
+              "RelativeToolTip": "API\\Controllers\\ExtruderTelemetryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAWwBUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:40:37.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateExtruderProgramDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateExtruderProgramDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateExtruderProgramDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateExtruderProgramDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\CreateExtruderProgramDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:36:46.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IExtruderTelemetryRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderTelemetryRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\IExtruderTelemetryRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderTelemetryRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\IExtruderTelemetryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:38:39.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ExtruderTelemetryRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderTelemetryRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\ExtruderTelemetryRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderTelemetryRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\ExtruderTelemetryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:39:09.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExtruderProgramsController.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderProgramsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ExtruderProgramsController.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderProgramsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ExtruderProgramsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:33:40.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Event.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Entities\\Event.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Event.cs",
+              "RelativeToolTip": "API\\Models\\Entities\\Event.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T09:30:22.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ExtruderProgramDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ExtruderProgramDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ExtruderProgramDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ExtruderProgramDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\ExtruderProgramDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA1wA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:29:44.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExtruderTelemetry.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ExtruderTelemetry.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Entities\\ExtruderTelemetry.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ExtruderTelemetry.cs",
+              "RelativeToolTip": "API\\Models\\Entities\\ExtruderTelemetry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T09:31:12.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAuwD4AAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T09:15:09.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ExtruderProgramRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderProgramRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\ExtruderProgramRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderProgramRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\ExtruderProgramRepository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:31:23.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-07T07:57:33.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IExtruderProgramRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderProgramRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\IExtruderProgramRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderProgramRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\IExtruderProgramRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:30:37.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "API\\appsettings.Development.json",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.Development.json",
+              "RelativeToolTip": "API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T10:05:20.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BatchStepExecutionRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\BatchStepExecutionRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\BatchStepExecutionRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\BatchStepExecutionRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\BatchStepExecutionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:18:28.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ZoneParams.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ZoneParams.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ZoneParams.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ZoneParams.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\ZoneParams.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:30:03.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IBatchStepExecutionRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IBatchStepExecutionRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\IBatchStepExecutionRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IBatchStepExecutionRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\IBatchStepExecutionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:15:27.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductionBatchRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductionBatchRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\ProductionBatchRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductionBatchRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\ProductionBatchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:18:08.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IProductionBatchRepository.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductionBatchRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\IProductionBatchRepository.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductionBatchRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\IProductionBatchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:14:42.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PerformStepDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\PerformStepDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\PerformStepDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\PerformStepDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\PerformStepDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:06:31.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "StartProductionBatchDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\StartProductionBatchDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\StartProductionBatchDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\StartProductionBatchDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\StartProductionBatchDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:05:32.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BatchStepExecutionDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\BatchStepExecutionDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\BatchStepExecutionDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\BatchStepExecutionDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\BatchStepExecutionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T07:06:04.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProductionBatchDetailDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionBatchDetailDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionBatchDetailDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionBatchDetailDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\ProductionBatchDetailDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:19:12.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductionBatchDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionBatchDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionBatchDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionBatchDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\ProductionBatchDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T12:18:53.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "IProductionOrderRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductionOrderRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IProductionOrderRepository.cs",
@@ -560,12 +986,35 @@
               "RelativeToolTip": "API\\Repositories\\IProductionOrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:14:29.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:14:29.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 36,
+              "Title": "UpdateProductionOrderDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\UpdateProductionOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T13:03:49.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ChangeOrderStatusDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
+              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
+              "RelativeToolTip": "API\\Models\\DTOs\\ChangeOrderStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T13:04:09.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "ProductionOrderRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductionOrderRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\ProductionOrderRepository.cs",
@@ -573,25 +1022,24 @@
               "RelativeToolTip": "API\\Repositories\\ProductionOrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:17:51.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:17:51.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 32,
               "Title": "ProductionOrdersController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionOrdersController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ProductionOrdersController.cs",
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionOrdersController.cs",
               "RelativeToolTip": "API\\Controllers\\ProductionOrdersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T07:25:42.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 39,
               "Title": "CreateProductionOrderDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateProductionOrderDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateProductionOrderDto.cs",
@@ -599,12 +1047,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\CreateProductionOrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:04:48.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:04:48.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 40,
               "Title": "ProductionOrderDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionOrderDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionOrderDto.cs",
@@ -612,12 +1059,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\ProductionOrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:03:10.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T13:03:10.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 42,
               "Title": "TechCardRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\TechCardRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\TechCardRepository.cs",
@@ -625,12 +1071,11 @@
               "RelativeToolTip": "API\\Repositories\\TechCardRepository.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAA9wCYAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:17:29.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:17:29.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 44,
               "Title": "TechCardsController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\TechCardsController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\TechCardsController.cs",
@@ -638,12 +1083,11 @@
               "RelativeToolTip": "API\\Controllers\\TechCardsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:25:20.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:25:20.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 38,
               "Title": "UpdateRecipeDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateRecipeDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\UpdateRecipeDto.cs",
@@ -651,12 +1095,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\UpdateRecipeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:36:26.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:36:26.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 37,
               "Title": "UpdateTechCardDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UpdateTechCardDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\UpdateTechCardDto.cs",
@@ -664,12 +1107,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\UpdateTechCardDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:50:45.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:50:45.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 43,
               "Title": "ITechCardRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ITechCardRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\ITechCardRepository.cs",
@@ -677,12 +1119,11 @@
               "RelativeToolTip": "API\\Repositories\\ITechCardRepository.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:14:12.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:14:12.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 45,
               "Title": "CreateTechStepDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateTechStepDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateTechStepDto.cs",
@@ -690,12 +1131,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\CreateTechStepDto.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAuwA4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:01:46.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:01:46.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 47,
               "Title": "TechStepDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\TechStepDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\TechStepDto.cs",
@@ -703,12 +1143,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\TechStepDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:49:45.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:49:45.622Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 41,
               "Title": "ProductionOrder.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ProductionOrder.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\ProductionOrder.cs",
@@ -716,12 +1155,11 @@
               "RelativeToolTip": "API\\Models\\Entities\\ProductionOrder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:26:35.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T09:26:35.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 48,
               "Title": "TechCardDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\TechCardDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\TechCardDto.cs",
@@ -729,12 +1167,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\TechCardDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:49:28.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:49:28.908Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 46,
               "Title": "CreateTechCardDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateTechCardDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateTechCardDto.cs",
@@ -742,12 +1179,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\CreateTechCardDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:01:22.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T07:01:22.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 49,
               "Title": "RecipesController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\RecipesController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\RecipesController.cs",
@@ -755,12 +1191,11 @@
               "RelativeToolTip": "API\\Controllers\\RecipesController.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAiwEgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:39:42.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:39:42.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 50,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
@@ -768,12 +1203,11 @@
               "RelativeToolTip": "API\\Controllers\\AuthController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAuwCwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:45:03.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T09:45:03.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 52,
               "Title": "IRecipeRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IRecipeRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IRecipeRepository.cs",
@@ -781,12 +1215,11 @@
               "RelativeToolTip": "API\\Repositories\\IRecipeRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAYwBQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:38:43.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:38:43.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 51,
               "Title": "RecipeRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\RecipeRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\RecipeRepository.cs",
@@ -794,12 +1227,11 @@
               "RelativeToolTip": "API\\Repositories\\RecipeRepository.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAADwv8IAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:38:57.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:38:57.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 58,
               "Title": "CreateRecipeDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateRecipeDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateRecipeDto.cs",
@@ -807,25 +1239,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\CreateRecipeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:36:08.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:36:08.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ExtruderProgramsController.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderProgramsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ExtruderProgramsController.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ExtruderProgramsController.cs",
-              "RelativeToolTip": "API\\Controllers\\ExtruderProgramsController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAHwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:33:40.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 55,
               "Title": "RecipeResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RecipeResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RecipeResponseDto.cs",
@@ -833,12 +1251,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\RecipeResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:36:37.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:36:37.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 53,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Helpers\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "API\\Helpers\\ClaimsPrincipalExtensions.cs",
@@ -846,12 +1263,11 @@
               "RelativeToolTip": "API\\Helpers\\ClaimsPrincipalExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T10:55:18.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T10:55:18.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 54,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "API\\Services\\TokenService.cs",
@@ -859,12 +1275,11 @@
               "RelativeToolTip": "API\\Services\\TokenService.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:14:26.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T09:14:26.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 57,
               "Title": "RecipeDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RecipeDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RecipeDto.cs",
@@ -872,12 +1287,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\RecipeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T11:31:21.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T11:31:21.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 56,
               "Title": "RecipeComponentResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RecipeComponentResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RecipeComponentResponseDto.cs",
@@ -885,25 +1299,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\RecipeComponentResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:37:04.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:37:04.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwEgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:15:09.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 59,
               "Title": "RecipeComponentDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RecipeComponentDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RecipeComponentDto.cs",
@@ -911,12 +1311,11 @@
               "RelativeToolTip": "API\\Models\\DTOs\\RecipeComponentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T11:26:59.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T11:26:59.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 60,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Recipe.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Recipe.cs",
@@ -928,19 +1327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "IProductionBatchRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductionBatchRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\IProductionBatchRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductionBatchRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\IProductionBatchRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:14:42.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 65,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\UserRepository.cs",
@@ -952,7 +1339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 63,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductDto.cs",
@@ -964,7 +1351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 62,
               "Title": "ReferenceController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ReferenceController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ReferenceController.cs",
@@ -976,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 61,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\ProductRepository.cs",
@@ -988,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 66,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\User.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\User.cs",
@@ -1000,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 64,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IProductRepository.cs",
@@ -1012,19 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ExtruderProgramRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderProgramRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\ExtruderProgramRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ExtruderProgramRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\ExtruderProgramRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:31:23.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 67,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
@@ -1036,55 +1411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "API\\appsettings.json",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.json",
-              "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-07T07:57:33.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "ZoneParams.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ZoneParams.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ZoneParams.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ZoneParams.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\ZoneParams.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:30:03.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IExtruderProgramRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderProgramRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\IExtruderProgramRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IExtruderProgramRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\IExtruderProgramRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:30:37.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ExtruderProgramDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ExtruderProgramDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\ExtruderProgramDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ExtruderProgramDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\ExtruderProgramDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:29:44.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 68,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\UsersController.cs",
@@ -1096,7 +1423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 70,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\UserProfileDto.cs",
@@ -1108,7 +1435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 71,
               "Title": "UserLoginRequest.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UserLoginRequest.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\UserLoginRequest.cs",
@@ -1120,7 +1447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 72,
               "Title": "UserRegisterRequest.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\UserRegisterRequest.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\UserRegisterRequest.cs",
@@ -1132,7 +1459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 69,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IUserRepository.cs",
@@ -1144,7 +1471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 73,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "API\\WeatherForecast.cs",
@@ -1156,7 +1483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 74,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Services\\ITokenService.cs",
               "RelativeDocumentMoniker": "API\\Services\\ITokenService.cs",
@@ -1168,7 +1495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 75,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\RoleRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\RoleRepository.cs",
@@ -1180,7 +1507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 76,
               "Title": "RawMaterialRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\RawMaterialRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\RawMaterialRepository.cs",
@@ -1192,7 +1519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 77,
               "Title": "QualityTestRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\QualityTestRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\QualityTestRepository.cs",
@@ -1204,19 +1531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ProductionBatchRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductionBatchRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\ProductionBatchRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\ProductionBatchRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\ProductionBatchRepository.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:18:08.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 78,
               "Title": "IRoleRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IRoleRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IRoleRepository.cs",
@@ -1228,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 79,
               "Title": "IRawMaterialRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IRawMaterialRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IRawMaterialRepository.cs",
@@ -1240,7 +1555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 80,
               "Title": "IQualityTestRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IQualityTestRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IQualityTestRepository.cs",
@@ -1252,19 +1567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "IEventRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IEventRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\IEventRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IEventRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\IEventRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:16:38.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 81,
               "Title": "IEquipmentRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IEquipmentRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IEquipmentRepository.cs",
@@ -1276,7 +1579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 82,
               "Title": "IDeviationRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IDeviationRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IDeviationRepository.cs",
@@ -1288,7 +1591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 83,
               "Title": "IDepartmentRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IDepartmentRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\IDepartmentRepository.cs",
@@ -1300,31 +1603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "IBatchStepExecutionRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IBatchStepExecutionRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\IBatchStepExecutionRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\IBatchStepExecutionRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\IBatchStepExecutionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:15:27.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\EventRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\EventRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\EventRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\EventRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA9wCcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:20:04.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 84,
               "Title": "EquipmentRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\EquipmentRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\EquipmentRepository.cs",
@@ -1336,7 +1615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 85,
               "Title": "DeviationRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\DeviationRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\DeviationRepository.cs",
@@ -1348,7 +1627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 86,
               "Title": "DepartmentRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\DepartmentRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\DepartmentRepository.cs",
@@ -1360,19 +1639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "BatchStepExecutionRepository.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\BatchStepExecutionRepository.cs",
-              "RelativeDocumentMoniker": "API\\Repositories\\BatchStepExecutionRepository.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\BatchStepExecutionRepository.cs",
-              "RelativeToolTip": "API\\Repositories\\BatchStepExecutionRepository.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAcwHkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:18:28.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 87,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Repositories\\BaseRepository.cs",
               "RelativeDocumentMoniker": "API\\Repositories\\BaseRepository.cs",
@@ -1384,7 +1651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 88,
               "Title": "PaginationInfo.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\PaginationInfo.cs",
               "RelativeDocumentMoniker": "API\\Models\\PaginationInfo.cs",
@@ -1396,7 +1663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 89,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\ApiResponse.cs",
               "RelativeDocumentMoniker": "API\\Models\\ApiResponse.cs",
@@ -1408,7 +1675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 90,
               "Title": "TechStep.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\TechStep.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\TechStep.cs",
@@ -1420,7 +1687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 91,
               "Title": "TechCard.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\TechCard.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\TechCard.cs",
@@ -1432,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 92,
               "Title": "StatusDict.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\StatusDict.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\StatusDict.cs",
@@ -1444,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 93,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Role.cs",
@@ -1456,7 +1723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 94,
               "Title": "RecipeComponent.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\RecipeComponent.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\RecipeComponent.cs",
@@ -1468,7 +1735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 95,
               "Title": "RawMaterialTestResult.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\RawMaterialTestResult.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\RawMaterialTestResult.cs",
@@ -1480,7 +1747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 96,
               "Title": "RawMaterialTest.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\RawMaterialTest.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\RawMaterialTest.cs",
@@ -1492,7 +1759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 97,
               "Title": "RawMaterialBatch.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\RawMaterialBatch.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\RawMaterialBatch.cs",
@@ -1504,7 +1771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 98,
               "Title": "RawMaterial.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\RawMaterial.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\RawMaterial.cs",
@@ -1516,7 +1783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 99,
               "Title": "QualityTestResult.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\QualityTestResult.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\QualityTestResult.cs",
@@ -1528,7 +1795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 100,
               "Title": "QualityTest.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\QualityTest.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\QualityTest.cs",
@@ -1540,7 +1807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 101,
               "Title": "ProductionBatch.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ProductionBatch.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\ProductionBatch.cs",
@@ -1552,7 +1819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 102,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Product.cs",
@@ -1564,19 +1831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
-              "Title": "ExtruderTelemetry.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ExtruderTelemetry.cs",
-              "RelativeDocumentMoniker": "API\\Models\\Entities\\ExtruderTelemetry.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ExtruderTelemetry.cs",
-              "RelativeToolTip": "API\\Models\\Entities\\ExtruderTelemetry.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:31:12.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 103,
               "Title": "ExtruderProgram.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\ExtruderProgram.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\ExtruderProgram.cs",
@@ -1588,19 +1843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Event.cs",
-              "RelativeDocumentMoniker": "API\\Models\\Entities\\Event.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Event.cs",
-              "RelativeToolTip": "API\\Models\\Entities\\Event.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T09:30:22.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 104,
               "Title": "Equipment.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Equipment.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Equipment.cs",
@@ -1612,7 +1855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 105,
               "Title": "Deviation.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Deviation.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Deviation.cs",
@@ -1624,7 +1867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 106,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\Department.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\Department.cs",
@@ -1636,7 +1879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 107,
               "Title": "BatchStepExecution.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\BatchStepExecution.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\BatchStepExecution.cs",
@@ -1648,7 +1891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 108,
               "Title": "BatchRawMaterialUsage.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\BatchRawMaterialUsage.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\BatchRawMaterialUsage.cs",
@@ -1660,7 +1903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 109,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\Entities\\AuditLog.cs",
               "RelativeDocumentMoniker": "API\\Models\\Entities\\AuditLog.cs",
@@ -1672,7 +1915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 110,
               "Title": "TechStepResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\TechStepResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\TechStepResponseDto.cs",
@@ -1684,7 +1927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 111,
               "Title": "TechCardResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\TechCardResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\TechCardResponseDto.cs",
@@ -1696,7 +1939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 112,
               "Title": "TechCardListItemDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\TechCardListItemDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\TechCardListItemDto.cs",
@@ -1708,19 +1951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
-              "Title": "StartProductionBatchDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\StartProductionBatchDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\StartProductionBatchDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\StartProductionBatchDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\StartProductionBatchDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:05:32.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 113,
               "Title": "RoleDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RoleDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RoleDto.cs",
@@ -1732,7 +1963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 114,
               "Title": "ReportDeviationDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ReportDeviationDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ReportDeviationDto.cs",
@@ -1744,7 +1975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 115,
               "Title": "RawMaterialDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\RawMaterialDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\RawMaterialDto.cs",
@@ -1756,7 +1987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 116,
               "Title": "QualityTestResultEntryDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\QualityTestResultEntryDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\QualityTestResultEntryDto.cs",
@@ -1768,7 +1999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 117,
               "Title": "QualityTestParameterDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\QualityTestParameterDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\QualityTestParameterDto.cs",
@@ -1780,7 +2011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 118,
               "Title": "ProductionOrderResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionOrderResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionOrderResponseDto.cs",
@@ -1792,7 +2023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 119,
               "Title": "ProductionOrderListItemDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionOrderListItemDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionOrderListItemDto.cs",
@@ -1804,7 +2035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 120,
               "Title": "ProductionBatchResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ProductionBatchResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ProductionBatchResponseDto.cs",
@@ -1816,19 +2047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
-              "Title": "PerformStepDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\PerformStepDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\PerformStepDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\PerformStepDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\PerformStepDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:06:31.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 121,
               "Title": "LaboratoryDecisionDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\LaboratoryDecisionDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\LaboratoryDecisionDto.cs",
@@ -1840,7 +2059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 122,
               "Title": "EventResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\EventResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\EventResponseDto.cs",
@@ -1852,7 +2071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 123,
               "Title": "EquipmentDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\EquipmentDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\EquipmentDto.cs",
@@ -1864,7 +2083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 124,
               "Title": "EnterTestResultDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\EnterTestResultDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\EnterTestResultDto.cs",
@@ -1876,7 +2095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 125,
               "Title": "DeviationResponseDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\DeviationResponseDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\DeviationResponseDto.cs",
@@ -1888,7 +2107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 126,
               "Title": "DeviationReportItemDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\DeviationReportItemDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\DeviationReportItemDto.cs",
@@ -1900,7 +2119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 127,
               "Title": "DepartmentDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\DepartmentDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\DepartmentDto.cs",
@@ -1912,7 +2131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 128,
               "Title": "CreateQualityTestDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\CreateQualityTestDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\CreateQualityTestDto.cs",
@@ -1924,19 +2143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
-              "Title": "BatchStepExecutionDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\BatchStepExecutionDto.cs",
-              "RelativeDocumentMoniker": "API\\Models\\DTOs\\BatchStepExecutionDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\BatchStepExecutionDto.cs",
-              "RelativeToolTip": "API\\Models\\DTOs\\BatchStepExecutionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:06:04.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 129,
               "Title": "BatchReportItemDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\BatchReportItemDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\BatchReportItemDto.cs",
@@ -1948,7 +2155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 130,
               "Title": "ActiveBatchListItemDto.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Models\\DTOs\\ActiveBatchListItemDto.cs",
               "RelativeDocumentMoniker": "API\\Models\\DTOs\\ActiveBatchListItemDto.cs",
@@ -1960,7 +2167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 131,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\WeatherForecastController.cs",
@@ -1972,7 +2179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 132,
               "Title": "QualityTestsController.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\QualityTestsController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\QualityTestsController.cs",
@@ -1984,55 +2191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
-              "Title": "ProductionBatchesController.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionBatchesController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ProductionBatchesController.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\ProductionBatchesController.cs",
-              "RelativeToolTip": "API\\Controllers\\ProductionBatchesController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAwwGUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:26:04.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 120,
-              "Title": "LaboratoryController.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\LaboratoryController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\LaboratoryController.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\LaboratoryController.cs",
-              "RelativeToolTip": "API\\Controllers\\LaboratoryController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwE0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:27:10.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 121,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "API\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAwwDMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:28:00.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 122,
-              "Title": "DeviationsController.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\DeviationsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\DeviationsController.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Controllers\\DeviationsController.cs",
-              "RelativeToolTip": "API\\Controllers\\DeviationsController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowC0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T07:27:45.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 133,
               "Title": "serviceDependencies.json",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\Properties\\serviceDependencies.json",
               "RelativeDocumentMoniker": "API\\Properties\\serviceDependencies.json",
@@ -2044,7 +2203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 134,
               "Title": "API.http",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\API.http",
               "RelativeDocumentMoniker": "API\\API.http",
@@ -2053,18 +2212,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2026-05-08T06:46:20.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 125,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "API\\appsettings.Development.json",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 2\\API\\API\\appsettings.Development.json",
-              "RelativeToolTip": "API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-08T10:05:20.036Z"
             }
           ]
         },

@@ -7,8 +7,9 @@ namespace API.Repositories
     {
         Task<IEnumerable<ExtruderProgram>> GetAllAsync();
         Task<ExtruderProgram?> GetByIdAsync(int id);
-        Task<int> CreateAsync(ExtruderProgramDto dto, int userId);
-        Task<bool> UpdateAsync(int id, ExtruderProgramDto dto, int userId);
+        Task<int> CreateAsync(CreateExtruderProgramDto dto, int userId);
+        Task<bool> UpdateAsync(int id, CreateExtruderProgramDto dto, int userId);
         Task<bool> DeleteAsync(int id);
+        Task<bool> AssignToBatchAsync(int programId, int batchId);
     }
 }

@@ -1,13 +1,13 @@
-﻿using ClosedXML.Excel;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using ClosedXML.Excel;
+using Microsoft.Win32;
 using ПрилТехно.Models;
 using ПрилТехно.Services;
 
@@ -18,17 +18,15 @@ namespace ПрилТехно.ViewModels
         private readonly ApiClient _apiClient;
         private readonly IDialogService _dialogService;
 
-        // Константы для типов отчётов (избегаем ошибок строк)
-        private const string ReportOrders = "Отчёт по заказам";
+        // Константы для типов отчётов
         private const string ReportBatches = "Отчёт по партиям за период";
         private const string ReportDeviations = "Отчёт по отклонениям";
         private const string ReportRecipeUsage = "Отчёт по использованию рецептур";
         private const string ReportExtruder = "Отчёт по событиям экструдера";
         private const string ReportLabBlocks = "Отчёт по лабораторным блокировкам";
-        private const string ReportSystemEvents = "Журнал событий системы";
 
         [ObservableProperty]
-        private string? _selectedReport = ReportOrders;
+        private string? _selectedReport;
 
         [ObservableProperty]
         private DateTime _startDate = DateTime.Now.AddMonths(-1);
@@ -49,7 +47,6 @@ namespace ПрилТехно.ViewModels
         {
             _apiClient = apiClient;
             _dialogService = dialogService;
-
             GenerateReportCommand = new AsyncRelayCommand(GenerateReportAsync);
             ExportCommand = new AsyncRelayCommand(ExportAsync);
         }
@@ -67,9 +64,6 @@ namespace ПрилТехно.ViewModels
             {
                 switch (SelectedReport)
                 {
-                    case ReportOrders:
-                        await LoadOrdersReportAsync();
-                        break;
                     case ReportBatches:
                         await LoadBatchReportAsync();
                         break;
@@ -85,10 +79,8 @@ namespace ПрилТехно.ViewModels
                     case ReportLabBlocks:
                         await LoadLabBlockReportAsync();
                         break;
-                    case ReportSystemEvents:
-                        await LoadSystemEventsReportAsync();
-                        break;
                     default:
+                        System.Diagnostics.Debug.WriteLine($"Выбран отчёт: '{SelectedReport}'");
                         _dialogService.ShowMessage("Неизвестный тип отчёта");
                         break;
                 }
@@ -105,7 +97,7 @@ namespace ПрилТехно.ViewModels
 
         #region Загрузка данных из API
 
-        /// <summary>Отчёт по заказам (производственным заказам)</summary>
+        /// <summary>Отчёт по заказам (использует GET /api/productionorders)</summary>
         private async Task LoadOrdersReportAsync()
         {
             var response = await _apiClient.GetAsync<List<ProductionOrderDto>>("/api/productionorders");
@@ -137,7 +129,7 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Отчёт по производственным партиям за период</summary>
+        /// <summary>Отчёт по партиям (GET /api/productionbatches с фильтром по дате)</summary>
         private async Task LoadBatchReportAsync()
         {
             var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
@@ -169,7 +161,7 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Отчёт по отклонениям</summary>
+        /// <summary>Отчёт по отклонениям (GET /api/deviations)</summary>
         private async Task LoadDeviationReportAsync()
         {
             var response = await _apiClient.GetAsync<List<DeviationDto>>("/api/deviations");
@@ -202,7 +194,7 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Отчёт по использованию рецептур</summary>
+        /// <summary>Отчёт по использованию рецептур (GET /api/recipes и /api/productionbatches)</summary>
         private async Task LoadRecipeUsageReportAsync()
         {
             var recipesTask = _apiClient.GetAsync<List<RecipeDto>>("/api/recipes");
@@ -241,7 +233,7 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Отчёт по событиям экструдера (телеметрия)</summary>
+        /// <summary>Отчёт по событиям экструдера (GET /api/extrudertelemetry?batchId=...)</summary>
         private async Task LoadExtruderReportAsync()
         {
             var batchesResp = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
@@ -274,7 +266,7 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Отчёт по лабораторным блокировкам</summary>
+        /// <summary>Отчёт по лабораторным блокировкам (GET /api/productionbatches с фильтром lab_decision='blocked')</summary>
         private async Task LoadLabBlockReportAsync()
         {
             var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
@@ -301,20 +293,15 @@ namespace ПрилТехно.ViewModels
             ReportData = table;
         }
 
-        /// <summary>Журнал событий системы (например, уведомления)</summary>
+        /// <summary>Журнал событий системы (GET /api/events с фильтром по дате)</summary>
         private async Task LoadSystemEventsReportAsync()
         {
-            var response = await _apiClient.GetAsync<List<EventDto>>("/api/events/unread"); // или /api/events?from=...&to=...
+            var response = await _apiClient.GetAsync<List<EventDto>>($"/api/events?from={StartDate:yyyy-MM-dd}&to={EndDate:yyyy-MM-dd}");
             if (response?.IsSuccess != true || response.Data == null)
             {
                 _dialogService.ShowMessage("Не удалось загрузить события");
                 return;
             }
-
-            var filtered = response.Data
-                .Where(e => e.CreatedAt.Date >= StartDate.Date && e.CreatedAt.Date <= EndDate.Date)
-                .OrderByDescending(e => e.CreatedAt)
-                .ToList();
 
             var table = new DataTable();
             table.Columns.Add("Тип", typeof(string));
@@ -323,7 +310,7 @@ namespace ПрилТехно.ViewModels
             table.Columns.Add("Дата", typeof(DateTime));
             table.Columns.Add("Пользователь", typeof(string));
 
-            foreach (var e in filtered)
+            foreach (var e in response.Data)
             {
                 table.Rows.Add(e.EventType, e.SourceType, e.Message, e.CreatedAt, e.UserName);
             }

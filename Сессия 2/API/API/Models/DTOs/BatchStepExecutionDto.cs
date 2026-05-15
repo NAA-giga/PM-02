@@ -2,9 +2,10 @@
 {
     public class BatchStepExecutionDto
     {
+        public int Id { get; set; }
         public int StepOrder { get; set; }
         public string StepName { get; set; } = string.Empty;
-        public string Status { get; set; } = string.Empty; // pending, running, completed, skipped
+        public string Status { get; set; } = string.Empty;
         public decimal? ActualTempC { get; set; }
         public decimal? ActualPressureBar { get; set; }
         public int? ActualDurationMin { get; set; }

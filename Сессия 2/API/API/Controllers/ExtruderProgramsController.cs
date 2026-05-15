@@ -1,60 +1,60 @@
-﻿using API.Helpers;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using API.Helpers;
 using API.Models;
 using API.Models.DTOs;
 using API.Repositories;
-using API.Repositories.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
 namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Technologist,Admin")]
+    [Authorize(Roles = "technologist,admin")]
     public class ExtruderProgramsController : ControllerBase
     {
-        private readonly IExtruderProgramRepository _repository;
+        private readonly IExtruderProgramRepository _programRepository;
+        private readonly IExtruderTelemetryRepository _telemetryRepository;
 
-        public ExtruderProgramsController(IExtruderProgramRepository repository)
+        public ExtruderProgramsController(
+            IExtruderProgramRepository programRepository,
+            IExtruderTelemetryRepository telemetryRepository)
         {
-            _repository = repository;
+            _programRepository = programRepository;
+            _telemetryRepository = telemetryRepository;
         }
 
         /// <summary>
-        /// Получить список всех программ экструдера
+        /// Получить все программы экструдера
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var programs = await _repository.GetAllAsync();
-            return Ok(new ApiResponse<IEnumerable<ExtruderProgramDto>>
+            var programs = await _programRepository.GetAllAsync();
+            var dtos = programs.Select(p => new ExtruderProgramDto
             {
-                IsSuccess = true,
-                Data = programs.Select(p => new ExtruderProgramDto
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    Version = p.Version,
-                    ProductionBatchId = p.ProductionBatchId,
-                    Status = p.Status,
-                    ZoneParameters = !string.IsNullOrEmpty(p.ZoneParams)
-                        ? JsonSerializer.Deserialize<Dictionary<int, ZoneParams>>(p.ZoneParams) ?? new Dictionary<int, ZoneParams>()
-                        : new Dictionary<int, ZoneParams>()
-                })
+                Id = p.Id,
+                Name = p.Name,
+                Version = p.Version,
+                ProductionBatchId = p.ProductionBatchId,
+                Status = p.Status,
+                CreatedAt = p.CreatedAt,
+                ZoneParameters = string.IsNullOrEmpty(p.ZoneParams)
+                    ? new Dictionary<int, ZoneParams>()
+                    : JsonSerializer.Deserialize<Dictionary<int, ZoneParams>>(p.ZoneParams) ?? new()
             });
+            return Ok(new ApiResponse<IEnumerable<ExtruderProgramDto>> { IsSuccess = true, Data = dtos });
         }
 
         /// <summary>
-        /// Получить программу экструдера по ID
+        /// Получить программу по ID
         /// </summary>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var program = await _repository.GetByIdAsync(id);
+            var program = await _programRepository.GetByIdAsync(id);
             if (program == null)
                 return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Программа не найдена" });
-
             var dto = new ExtruderProgramDto
             {
                 Id = program.Id,
@@ -62,11 +62,11 @@ namespace API.Controllers
                 Version = program.Version,
                 ProductionBatchId = program.ProductionBatchId,
                 Status = program.Status,
-                ZoneParameters = !string.IsNullOrEmpty(program.ZoneParams)
-                    ? JsonSerializer.Deserialize<Dictionary<int, ZoneParams>>(program.ZoneParams) ?? new Dictionary<int, ZoneParams>()
-                    : new Dictionary<int, ZoneParams>()
+                CreatedAt = program.CreatedAt,
+                ZoneParameters = string.IsNullOrEmpty(program.ZoneParams)
+                    ? new Dictionary<int, ZoneParams>()
+                    : JsonSerializer.Deserialize<Dictionary<int, ZoneParams>>(program.ZoneParams) ?? new()
             };
-
             return Ok(new ApiResponse<ExtruderProgramDto> { IsSuccess = true, Data = dto });
         }
 
@@ -74,35 +74,27 @@ namespace API.Controllers
         /// Создать новую программу экструдера
         /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ExtruderProgramDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateExtruderProgramDto dto)
         {
-            if (dto == null || string.IsNullOrWhiteSpace(dto.Name))
-                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Название программы обязательно" });
-
             var userId = User.GetUserId();
-            var id = await _repository.CreateAsync(dto, userId);
+            var id = await _programRepository.CreateAsync(dto, userId);
             return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { Id = id } });
         }
 
         /// <summary>
-        /// Обновить существующую программу экструдера
+        /// Обновить программу экструдера
         /// </summary>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ExtruderProgramDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] CreateExtruderProgramDto dto)
         {
-            if (dto == null || id != (dto.Id ?? 0))
-                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Несоответствие ID программы" });
-
-            var existing = await _repository.GetByIdAsync(id);
+            var existing = await _programRepository.GetByIdAsync(id);
             if (existing == null)
                 return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Программа не найдена" });
-
             var userId = User.GetUserId();
-            var success = await _repository.UpdateAsync(id, dto, userId);
+            var success = await _programRepository.UpdateAsync(id, dto, userId);
             if (!success)
-                return StatusCode(500, new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Ошибка при обновлении программы" });
-
-            return Ok(new ApiResponse<object> { IsSuccess = true, Data = "Программа обновлена" });
+                return StatusCode(500, new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Ошибка обновления" });
+            return Ok(new ApiResponse<object> { IsSuccess = true });
         }
 
         /// <summary>
@@ -111,15 +103,25 @@ namespace API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var existing = await _repository.GetByIdAsync(id);
+            var existing = await _programRepository.GetByIdAsync(id);
             if (existing == null)
                 return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Программа не найдена" });
-
-            var success = await _repository.DeleteAsync(id);
+            var success = await _programRepository.DeleteAsync(id);
             if (!success)
-                return StatusCode(500, new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Ошибка при удалении программы" });
+                return StatusCode(500, new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Ошибка удаления" });
+            return Ok(new ApiResponse<object> { IsSuccess = true });
+        }
 
-            return Ok(new ApiResponse<object> { IsSuccess = true, Data = "Программа удалена" });
+        /// <summary>
+        /// Привязать программу к партии
+        /// </summary>
+        [HttpPost("{programId}/assign/{batchId}")]
+        public async Task<IActionResult> AssignToBatch(int programId, int batchId)
+        {
+            var success = await _programRepository.AssignToBatchAsync(programId, batchId);
+            if (!success)
+                return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Программа или партия не найдены" });
+            return Ok(new ApiResponse<object> { IsSuccess = true });
         }
     }
 }

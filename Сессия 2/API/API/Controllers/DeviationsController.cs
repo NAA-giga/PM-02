@@ -30,7 +30,14 @@ public class DeviationsController : ControllerBase
     {
         var userId = User.GetUserId();
         var devId = await _deviationRepository.CreateAsync(dto, userId);
-        await _eventRepository.CreateEventAsync("deviation", "batch", dto.ProductionBatchId, dto.Description, userId);
+        await _eventRepository.CreateEventAsync(new CreateEventDto
+        {
+            EventType = "deviation",
+            SourceType = "batch",
+            SourceId = dto.ProductionBatchId,
+            Message = dto.Description,
+            UserId = userId
+        });
         return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { DeviationId = devId } });
     }
 

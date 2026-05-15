@@ -65,6 +65,48 @@
   },
   {
     "ContainingType": "API.Controllers.EventsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "sourceType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.EventsController",
+    "Method": "Create",
+    "RelativePath": "api/Events",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "API.Models.DTOs.CreateEventDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.EventsController",
     "Method": "MarkAsRead",
     "RelativePath": "api/Events/{id}/read",
     "HttpMethod": "POST",
@@ -109,7 +151,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "API.Models.DTOs.ExtruderProgramDto",
+        "Type": "API.Models.DTOs.CreateExtruderProgramDto",
         "IsRequired": true
       }
     ],
@@ -146,7 +188,7 @@
       },
       {
         "Name": "dto",
-        "Type": "API.Models.DTOs.ExtruderProgramDto",
+        "Type": "API.Models.DTOs.CreateExtruderProgramDto",
         "IsRequired": true
       }
     ],
@@ -163,6 +205,75 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderProgramsController",
+    "Method": "AssignToBatch",
+    "RelativePath": "api/ExtruderPrograms/{programId}/assign/{batchId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "programId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "batchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderTelemetryController",
+    "Method": "GetByBatchId",
+    "RelativePath": "api/ExtruderTelemetry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "batchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderTelemetryController",
+    "Method": "AddTelemetry",
+    "RelativePath": "api/ExtruderTelemetry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telemetry",
+        "Type": "API.Models.Entities.ExtruderTelemetry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ExtruderTelemetryController",
+    "Method": "AddTelemetryBatch",
+    "RelativePath": "api/ExtruderTelemetry/batch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "telemetryList",
+        "Type": "System.Collections.Generic.List\u00601[[API.Models.Entities.ExtruderTelemetry, API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
@@ -192,6 +303,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ProductionBatchesController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProductionBatches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -259,7 +391,23 @@
   },
   {
     "ContainingType": "API.Controllers.ProductionBatchesController",
-    "Method": "CompleteBatch",
+    "Method": "Cancel",
+    "RelativePath": "api/ProductionBatches/{id}/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ProductionBatchesController",
+    "Method": "Complete",
     "RelativePath": "api/ProductionBatches/{id}/complete",
     "HttpMethod": "POST",
     "IsController": true,

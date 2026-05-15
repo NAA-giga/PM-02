@@ -1,18 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
 namespace API.Models.Entities
 {
     [Table("events")]
     public class Event
     {
-        [Key]
+        [Column("id")]
         public int Id { get; set; }
 
         [Column("event_type")]
-        public string EventType { get; set; } = string.Empty;
+        public string EventType { get; set; } = string.Empty;  // batch_started, batch_completed, deviation, lab_decision, etc.
 
         [Column("source_type")]
-        public string SourceType { get; set; } = string.Empty;
+        public string SourceType { get; set; } = string.Empty; // batch, test, deviation, extruder
 
         [Column("source_id")]
         public int SourceId { get; set; }

@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\viewmodels\\reportsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\viewmodels\\techcardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\deviationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\deviationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|solutionrelative:\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\models\\productionbatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0042295-0773-5BF6-32BF-6E75E7A12D32}|\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj|c:\\23\u043F-2\\pm-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\\u043F\u0440\u0438\u043B\u0442\u0435\u0445\u043D\u043E\\views\\techcardeditview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -318,7 +318,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 198,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -330,28 +330,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T12:00:53.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T07:17:31.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductionOrderDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T12:00:36.891Z",
+              "WhenOpened": "2026-05-12T09:02:41.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExtruderTelemetryDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:48:38.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductionBatchDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:48:05.983Z",
               "EditorCaption": ""
             },
             {
@@ -360,132 +383,16 @@
               "Title": "ReportsViewModel.cs",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs",
               "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs*",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs*",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAewAkAAAAbAAAAAAAAAA==",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ReportsViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAtwDkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T09:08:47.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReportsView.xaml",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T09:10:38.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:17:31.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:02:41.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExtruderTelemetryDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ExtruderTelemetryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:48:38.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReportsView.xaml.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:40:37.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowEAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:48:52.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TechCardsViewModel.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAWwGsAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:08:22.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProductionBatchDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionBatchDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:48:05.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DeviationDto.cs",
-              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
-              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
-              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
-              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:48:23.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj",
               "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E.csproj",
@@ -498,6 +405,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportsView.xaml",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-12T09:10:38.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductionOrderDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductionOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T12:00:36.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EventDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T12:00:53.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportsView.xaml.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ReportsView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T09:40:37.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowEAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T07:48:52.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TechCardsViewModel.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardsViewModel.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAWwGsAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T09:08:22.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DeviationDto.cs",
+              "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
+              "RelativeDocumentMoniker": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
+              "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
+              "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\DeviationDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T11:48:23.191Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "TechCardEditView.xaml",
               "DocumentMoniker": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardEditView.xaml",
@@ -505,8 +495,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardEditView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardEditView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-14T11:02:47.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:02:47.597Z"
             },
             {
               "$type": "Document",
@@ -518,8 +507,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardEditView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:04:20.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:04:20.436Z"
             },
             {
               "$type": "Document",
@@ -531,8 +519,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\TechStepDto.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAcwBkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:00:08.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:00:08.368Z"
             },
             {
               "$type": "Document",
@@ -544,8 +531,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\TechCardEditViewModel.cs",
               "ViewState": "AgIAAPsAAAAAAAAAAAAAAPsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:10:54.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:10:54.413Z"
             },
             {
               "$type": "Document",
@@ -557,8 +543,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\TechCardDto.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAA5wBQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T10:59:49.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T10:59:49.002Z"
             },
             {
               "$type": "Document",
@@ -570,8 +555,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\StepEditView.xaml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:04:11.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:04:11.723Z"
             },
             {
               "$type": "Document",
@@ -582,8 +566,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\StepEditView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\StepEditView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-14T11:03:56.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:03:56.899Z"
             },
             {
               "$type": "Document",
@@ -595,8 +578,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\StepEditViewModel.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:03:38.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:03:38.046Z"
             },
             {
               "$type": "Document",
@@ -608,8 +590,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\EquipmentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T11:00:23.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T11:00:23.542Z"
             },
             {
               "$type": "Document",
@@ -621,8 +602,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardsView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:40:39.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:40:39.631Z"
             },
             {
               "$type": "Document",
@@ -634,8 +614,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\RecipesViewModel.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:08:17.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:08:17.265Z"
             },
             {
               "$type": "Document",
@@ -646,8 +625,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardsView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\TechCardsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T09:09:36.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:09:36.19Z"
             },
             {
               "$type": "Document",
@@ -659,8 +637,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\RecipeEditViewModel.cs",
               "ViewState": "AgIAAHkAAAAAAAAAAAAewIoAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:18:23.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:18:23.935Z"
             },
             {
               "$type": "Document",
@@ -672,8 +649,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\RecipeEditView.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:21:20.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:21:20.784Z"
             },
             {
               "$type": "Document",
@@ -685,8 +661,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ComponentEditView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:22:24.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:22:24.713Z"
             },
             {
               "$type": "Document",
@@ -698,8 +673,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ProductsView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T09:40:34.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:40:34.583Z"
             },
             {
               "$type": "Document",
@@ -711,8 +685,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\ViewModels\\ComponentEditViewModel.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAA1wCsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:22:38.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:22:38.089Z"
             },
             {
               "$type": "Document",
@@ -724,8 +697,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T11:01:13.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T11:01:13.477Z"
             },
             {
               "$type": "Document",
@@ -737,8 +709,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\RecipeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:16:08.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:16:08.49Z"
             },
             {
               "$type": "Document",
@@ -750,8 +721,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\RecipeComponentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:16:24.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:16:24.212Z"
             },
             {
               "$type": "Document",
@@ -763,8 +733,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\RawMaterialDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T09:25:36.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:25:36.968Z"
             },
             {
               "$type": "Document",
@@ -775,8 +744,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ComponentEditView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ComponentEditView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-14T09:22:17.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:22:17.23Z"
             },
             {
               "$type": "Document",
@@ -788,8 +756,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Helpers\\Base64ToImageConverter.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwBIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T08:01:12.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T08:01:12.728Z"
             },
             {
               "$type": "Document",
@@ -800,8 +767,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\RecipeEditView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\RecipeEditView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-14T09:20:33.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T09:20:33.658Z"
             },
             {
               "$type": "Document",
@@ -825,8 +791,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Services\\ApiClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:55:06.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T07:55:06.864Z"
             },
             {
               "$type": "Document",
@@ -837,8 +802,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\RecipesView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\RecipesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T09:41:14.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:41:14.3Z"
             },
             {
               "$type": "Document",
@@ -849,8 +813,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ProductsView.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Views\\ProductsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T09:09:15.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T09:09:15.337Z"
             },
             {
               "$type": "Document",
@@ -885,8 +848,7 @@
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\Models\\ApiResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T07:51:36.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T07:51:36.874Z"
             },
             {
               "$type": "Document",
@@ -979,8 +941,7 @@
               "ToolTip": "C:\\23\u041F-2\\PM-02\\\u0441\u0435\u0441\u0441\u0438\u044F 3\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml",
               "RelativeToolTip": "\u041F\u0440\u0438\u043B\u0422\u0435\u0445\u043D\u043E\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T07:48:40.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T07:48:40.182Z"
             },
             {
               "$type": "Document",

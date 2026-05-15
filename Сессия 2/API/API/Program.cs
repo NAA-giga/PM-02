@@ -59,16 +59,8 @@ builder.Services.AddScoped<IBatchStepExecutionRepository, BatchStepExecutionRepo
 builder.Services.AddScoped<IQualityTestRepository, QualityTestRepository>();
 builder.Services.AddScoped<IDeviationRepository, DeviationRepository>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
-builder.Services.AddScoped<ITechCardRepository, TechCardRepository>();
-builder.Services.AddScoped<IProductionOrderRepository, ProductionOrderRepository>();
-builder.Services.AddScoped<IProductionBatchRepository, ProductionBatchRepository>();
-builder.Services.AddScoped<IBatchStepExecutionRepository, BatchStepExecutionRepository>();
-builder.Services.AddScoped<IQualityTestRepository, QualityTestRepository>();
-builder.Services.AddScoped<IDeviationRepository, DeviationRepository>();
-builder.Services.AddScoped<IEventRepository, EventRepository>();
-builder.Services.AddScoped<IRawMaterialRepository, RawMaterialRepository>();
 builder.Services.AddScoped<IExtruderProgramRepository, ExtruderProgramRepository>();
-
+builder.Services.AddScoped<IExtruderTelemetryRepository, ExtruderTelemetryRepository>();
 // ============================================================
 // 3. Регистрация сервисов
 // ============================================================

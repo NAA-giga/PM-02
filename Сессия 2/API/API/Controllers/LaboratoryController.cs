@@ -45,8 +45,15 @@ public class LaboratoryController : ControllerBase
         if (dto.Decision == "approved")
         {
             await _batchRepository.UpdateLabDecisionAsync(dto.BatchId, "approved", null, userId);
-            await _eventRepository.CreateEventAsync("decision", "batch", dto.BatchId,
-                $"Партия {batch.BatchNumber} одобрена лабораторией", userId);
+            await _eventRepository.CreateEventAsync(new CreateEventDto
+            {
+                EventType = "decision",
+                SourceType = "batch",
+                SourceId = dto.BatchId,
+                Message = $"Партия {batch.BatchNumber} одобрена лабораторией",
+                UserId = userId
+            });
+
             return Ok(new ApiResponse<object> { IsSuccess = true, Data = "Партия разрешена" });
         }
         else if (dto.Decision == "blocked")
@@ -54,8 +61,14 @@ public class LaboratoryController : ControllerBase
             if (string.IsNullOrWhiteSpace(dto.Reason))
                 return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Причина блокировки обязательна" });
             await _batchRepository.UpdateLabDecisionAsync(dto.BatchId, "blocked", dto.Reason, userId);
-            await _eventRepository.CreateEventAsync("decision", "batch", dto.BatchId,
-                $"Партия {batch.BatchNumber} заблокирована: {dto.Reason}", userId);
+            await _eventRepository.CreateEventAsync(new CreateEventDto
+            {
+                EventType = "decision",
+                SourceType = "batch",
+                SourceId = dto.BatchId,
+                Message = $"Партия {batch.BatchNumber} заблокирована: {dto.Reason}",
+                UserId = userId
+            });
             return Ok(new ApiResponse<object> { IsSuccess = true, Data = "Партия заблокирована" });
         }
         else
