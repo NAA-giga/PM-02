@@ -9,20 +9,40 @@ namespace API.Repositories
     {
         public ProductionBatchRepository(IConfiguration configuration) : base(configuration) { }
 
-        public async Task<IEnumerable<ProductionBatch>> GetAllAsync(DateTime? from = null, DateTime? to = null)
+        public async Task<IEnumerable<ProductionBatchDto>> GetAllAsync(DateTime? from = null, DateTime? to = null)
         {
             using var conn = CreateConnection();
-            var sql = @"SELECT pb.*, p.name AS ProductName, po.order_number AS OrderNumber 
-                        FROM production_batches pb
-                        JOIN products p ON pb.product_id = p.id
-                        JOIN production_orders po ON pb.order_id = po.id
-                        WHERE 1=1";
-            if (from.HasValue)
-                sql += " AND pb.start_time >= @From";
-            if (to.HasValue)
-                sql += " AND pb.start_time <= @To";
+            var sql = @"
+        SELECT 
+            pb.id,
+            pb.batch_number AS BatchNumber,
+            pb.order_id AS OrderId,
+            po.order_number AS OrderNumber,
+            pb.product_id AS ProductId,
+            p.name AS ProductName,
+            pb.recipe_id AS RecipeId,
+            r.name AS RecipeName,
+            pb.tech_card_id AS TechCardId,
+            tc.name AS TechCardName,
+            pb.status,
+            pb.planned_quantity_kg AS PlannedQuantityKg,
+            pb.actual_quantity_kg AS ActualQuantityKg,
+            pb.start_time AS StartTime,
+            pb.end_time AS EndTime,
+            pb.lab_decision AS LabDecision,
+            pb.lab_decision_date AS LabDecisionDate,
+            pb.lab_decision_reason AS LabDecisionReason,
+            pb.lab_decision_by AS LabDecisionBy
+        FROM production_batches pb
+        LEFT JOIN production_orders po ON pb.order_id = po.id
+        LEFT JOIN products p ON pb.product_id = p.id
+        LEFT JOIN recipes r ON pb.recipe_id = r.id
+        LEFT JOIN tech_cards tc ON pb.tech_card_id = tc.id
+        WHERE 1=1";
+            if (from.HasValue) sql += " AND pb.start_time >= @From";
+            if (to.HasValue) sql += " AND pb.start_time <= @To";
             sql += " ORDER BY pb.start_time DESC";
-            return await conn.QueryAsync<ProductionBatch>(sql, new { From = from, To = to });
+            return await conn.QueryAsync<ProductionBatchDto>(sql, new { From = from, To = to });
         }
 
         public async Task<ProductionBatch?> GetByIdAsync(int id)

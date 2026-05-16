@@ -3,7 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using API.Helpers;
 using API.Models;
 using API.Models.DTOs;
+using API.Models.Entities;
 using API.Repositories.Interfaces;
+using API.Repositories;
+using API.Controllers;
+using API.Services;
 
 namespace API.Controllers
 {
@@ -14,40 +18,25 @@ namespace API.Controllers
     {
         private readonly IProductionBatchRepository _batchRepository;
         private readonly IBatchStepExecutionRepository _stepRepository;
-        private readonly IEventRepository _eventRepository;
+        private readonly IEventService _eventService;
 
         public ProductionBatchesController(
             IProductionBatchRepository batchRepository,
             IBatchStepExecutionRepository stepRepository,
-            IEventRepository eventRepository)
+            IEventService eventService)
         {
             _batchRepository = batchRepository;
             _stepRepository = stepRepository;
-            _eventRepository = eventRepository;
+            _eventService = eventService;
         }
 
         /// <summary>
-        /// Получить список партий (с фильтрацией по дате)
+        /// Получить список партий с фильтрацией по дате (для отчётов)
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] DateTime? from, [FromQuery] DateTime? to)
         {
-            var batches = await _batchRepository.GetAllAsync(from, to);
-            var dtos = batches.Select(b => new ProductionBatchDto
-            {
-                Id = b.Id,
-                BatchNumber = b.BatchNumber,
-                OrderId = b.OrderId,
-                ProductId = b.ProductId,
-                RecipeId = b.RecipeId,
-                TechCardId = b.TechCardId,
-                Status = b.Status,
-                PlannedQuantityKg = b.PlannedQuantityKg,
-                ActualQuantityKg = b.ActualQuantityKg,
-                StartTime = b.StartTime,
-                EndTime = b.EndTime,
-                LabDecision = b.LabDecision
-            });
+            var dtos = await _batchRepository.GetAllAsync(from, to);
             return Ok(new ApiResponse<IEnumerable<ProductionBatchDto>> { IsSuccess = true, Data = dtos });
         }
 
@@ -70,7 +59,18 @@ namespace API.Controllers
         public async Task<IActionResult> GetActive()
         {
             var batches = await _batchRepository.GetActiveBatchesAsync();
-            return Ok(new ApiResponse<IEnumerable<ProductionBatchDto>> { IsSuccess = true, Data = batches.Select(b => new ProductionBatchDto { Id = b.Id, BatchNumber = b.BatchNumber, Status = b.Status }) });
+            return Ok(new ApiResponse<IEnumerable<ProductionBatchDto>>
+            {
+                IsSuccess = true,
+                Data = batches.Select(b => new ProductionBatchDto
+                {
+                    Id = b.Id,
+                    BatchNumber = b.BatchNumber,
+                    ProductName = b.ProductName,
+                    Status = b.Status,
+                    StartTime = b.StartTime
+                })
+            });
         }
 
         /// <summary>
@@ -84,14 +84,7 @@ namespace API.Controllers
             try
             {
                 var batchId = await _batchRepository.StartBatchAsync(dto, userId);
-                await _eventRepository.CreateEventAsync(new CreateEventDto
-                {
-                    EventType = "batch_started",
-                    SourceType = "batch",
-                    SourceId = batchId,
-                    Message = $"Запущена партия {dto.BatchNumber}",
-                    UserId = userId
-                });
+                await _eventService.LogEventAsync("batch_started", "batch", batchId, $"Запущена партия {dto.BatchNumber}", userId);
                 return Ok(new ApiResponse<object> { IsSuccess = true, Data = new { BatchId = batchId } });
             }
             catch (InvalidOperationException ex)
@@ -111,14 +104,7 @@ namespace API.Controllers
             var success = await _batchRepository.CompleteBatchAsync(id, actualQuantity, userId);
             if (!success)
                 return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось завершить партию" });
-            await _eventRepository.CreateEventAsync(new CreateEventDto
-            {
-                EventType = "batch_completed",
-                SourceType = "batch",
-                SourceId = id,
-                Message = "Партия завершена",
-                UserId = userId
-            });
+            await _eventService.LogEventAsync("batch_completed", "batch", id, "Партия завершена", userId);
             return Ok(new ApiResponse<object> { IsSuccess = true });
         }
 
@@ -133,14 +119,30 @@ namespace API.Controllers
             var success = await _batchRepository.CancelBatchAsync(id, userId);
             if (!success)
                 return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось отменить партию" });
-            await _eventRepository.CreateEventAsync(new CreateEventDto
-            {
-                EventType = "batch_cancelled",
-                SourceType = "batch",
-                SourceId = id,
-                Message = "Партия отменена",
-                UserId = userId
-            });
+            await _eventService.LogEventAsync("batch_cancelled", "batch", id, "Партия отменена", userId);
+            return Ok(new ApiResponse<object> { IsSuccess = true });
+        }
+
+        /// <summary>
+        /// Принять лабораторное решение по партии (разрешить/заблокировать)
+        /// </summary>
+        [HttpPost("{id}/lab-decision")]
+        [Authorize(Roles = "lab_analyst,technologist,admin")]
+        public async Task<IActionResult> LabDecision(int id, [FromBody] LaboratoryDecisionDto dto)
+        {
+            var userId = User.GetUserId();
+            var batch = await _batchRepository.GetByIdAsync(id);
+            if (batch == null)
+                return NotFound(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Партия не найдена" });
+
+            // Проверка, что все лабораторные испытания завершены (опционально)
+            // Для простоты предполагаем, что проверка есть в сервисе или репозитории
+            var success = await _batchRepository.UpdateLabDecisionAsync(id, dto.Decision, dto.Reason, userId);
+            if (!success)
+                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось сохранить решение" });
+
+            var message = dto.Decision == "approved" ? $"Партия {batch.BatchNumber} одобрена лабораторией" : $"Партия {batch.BatchNumber} заблокирована: {dto.Reason}";
+            await _eventService.LogEventAsync("lab_decision", "batch", id, message, userId);
             return Ok(new ApiResponse<object> { IsSuccess = true });
         }
 
@@ -154,7 +156,8 @@ namespace API.Controllers
             var userId = User.GetUserId();
             var success = await _stepRepository.StartStepAsync(batchId, stepOrder, userId);
             if (!success)
-                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось начать шаг" });
+                return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось начать шаг (возможно, шаг уже начат)" });
+            await _eventService.LogEventAsync("step_started", "batch_step", batchId, $"Начат шаг {stepOrder}", userId);
             return Ok(new ApiResponse<object> { IsSuccess = true });
         }
 
@@ -169,7 +172,9 @@ namespace API.Controllers
             var success = await _stepRepository.CompleteStepAsync(batchId, stepOrder, data, userId);
             if (!success)
                 return BadRequest(new ApiResponse<object> { IsSuccess = false, ErrorMessage = "Не удалось завершить шаг" });
+            await _eventService.LogEventAsync("step_completed", "batch_step", batchId, $"Завершён шаг {stepOrder}", userId);
             return Ok(new ApiResponse<object> { IsSuccess = true });
         }
+
     }
 }

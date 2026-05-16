@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using API.Helpers;
 using API.Models;
 using API.Models.DTOs;
-using API.Repositories;
 using System.Text.Json;
+using API.Repositories.Interfaces;
 
 namespace API.Controllers
 {

@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using API.Models.Entities;
+using API.Repositories.Interfaces;
 
 namespace API.Repositories;
 

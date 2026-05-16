@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using API.Models;
 using API.Models.Entities;
-using API.Repositories;
+using API.Repositories.Interfaces;
 
 namespace API.Controllers
 {

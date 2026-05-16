@@ -33,7 +33,28 @@
   },
   {
     "ContainingType": "API.Controllers.DeviationsController",
-    "Method": "Report",
+    "Method": "GetAll",
+    "RelativePath": "api/Deviations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DeviationsController",
+    "Method": "Create",
     "RelativePath": "api/Deviations",
     "HttpMethod": "POST",
     "IsController": true,
@@ -49,7 +70,7 @@
   },
   {
     "ContainingType": "API.Controllers.DeviationsController",
-    "Method": "GetByBatch",
+    "Method": "GetByBatchId",
     "RelativePath": "api/Deviations/batch/{batchId}",
     "HttpMethod": "GET",
     "IsController": true,

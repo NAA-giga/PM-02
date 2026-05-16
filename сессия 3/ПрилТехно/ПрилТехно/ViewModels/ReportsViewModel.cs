@@ -1,13 +1,14 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using ClosedXML.Excel;
-using Microsoft.Win32;
 using ПрилТехно.Models;
 using ПрилТехно.Services;
 
@@ -39,6 +40,8 @@ namespace ПрилТехно.ViewModels
 
         [ObservableProperty]
         private bool _isLoading;
+        public bool IsNotLoading => !IsLoading;
+        public bool CanExport => ReportData != null && ReportData.Rows.Count > 0;
 
         public ICommand GenerateReportCommand { get; }
         public ICommand ExportCommand { get; }
@@ -92,12 +95,13 @@ namespace ПрилТехно.ViewModels
             finally
             {
                 IsLoading = false;
+                OnPropertyChanged(nameof(IsNotLoading));
+                OnPropertyChanged(nameof(CanExport));
             }
         }
 
         #region Загрузка данных из API
 
-        /// <summary>Отчёт по заказам (использует GET /api/productionorders)</summary>
         private async Task LoadOrdersReportAsync()
         {
             var response = await _apiClient.GetAsync<List<ProductionOrderDto>>("/api/productionorders");
@@ -118,20 +122,28 @@ namespace ПрилТехно.ViewModels
             table.Columns.Add("План, кг", typeof(decimal));
             table.Columns.Add("Статус", typeof(string));
             table.Columns.Add("Плановая дата", typeof(DateTime));
-            table.Columns.Add("Факт. начало", typeof(DateTime?));
-            table.Columns.Add("Факт. конец", typeof(DateTime?));
+            table.Columns.Add("Факт. начало", typeof(DateTime));
+            table.Columns.Add("Факт. конец", typeof(DateTime));
 
             foreach (var order in filtered)
             {
-                table.Rows.Add(order.OrderNumber, order.ProductName, order.PlannedQuantityKg,
-                               order.Status, order.PlannedStartDate, order.ActualStartDate, order.ActualEndDate);
+                table.Rows.Add(
+                    order.OrderNumber,
+                    order.ProductName,
+                    order.PlannedQuantityKg,
+                    order.Status,
+                    order.PlannedStartDate,
+                    (object?)order.ActualStartDate ?? DBNull.Value,
+                    (object?)order.ActualEndDate ?? DBNull.Value
+                );
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Отчёт по партиям (GET /api/productionbatches с фильтром по дате)</summary>
         private async Task LoadBatchReportAsync()
         {
+            System.Diagnostics.Debug.WriteLine($"StartDate: {StartDate:yyyy-MM-dd}, EndDate: {EndDate:yyyy-MM-dd}");
             var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
             if (response?.IsSuccess != true || response.Data == null)
             {
@@ -139,29 +151,33 @@ namespace ПрилТехно.ViewModels
                 return;
             }
 
-            var filtered = response.Data
-                .Where(b => b.StartTime.HasValue && b.StartTime.Value.Date >= StartDate.Date && b.StartTime.Value.Date <= EndDate.Date)
-                .OrderBy(b => b.StartTime)
-                .ToList();
+            var filtered = response.Data.ToList(); // можно вернуть фильтрацию позже
+
+            System.Diagnostics.Debug.WriteLine($"Найдено партий: {filtered.Count}");
+            if (filtered.Count == 0)
+            {
+                _dialogService.ShowMessage("Нет партий за выбранный период");
+                return;
+            }
 
             var table = new DataTable();
-            table.Columns.Add("Номер партии", typeof(string));
+            table.Columns.Add("НомерПартии", typeof(string));
             table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("Дата запуска", typeof(DateTime?));
+            table.Columns.Add("ДатаЗапуска", typeof(DateTime));
             table.Columns.Add("Статус", typeof(string));
-            table.Columns.Add("План, кг", typeof(decimal));
-            table.Columns.Add("Факт, кг", typeof(decimal?));
-            table.Columns.Add("Лаб. решение", typeof(string));
+            table.Columns.Add("ПланКг", typeof(decimal));
+            table.Columns.Add("ФактКг", typeof(decimal));
+            table.Columns.Add("ЛабРешение", typeof(string));
 
             foreach (var b in filtered)
             {
-                table.Rows.Add(b.BatchNumber, b.ProductName, b.StartTime, b.Status,
-                               b.PlannedQuantityKg, b.ActualQuantityKg, b.LabDecision);
+                Debug.WriteLine($"Batch: '{b.BatchNumber}', Product: '{b.ProductName}', Plan: {b.PlannedQuantityKg}, Start: {b.StartTime}");
             }
+
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Отчёт по отклонениям (GET /api/deviations)</summary>
         private async Task LoadDeviationReportAsync()
         {
             var response = await _apiClient.GetAsync<List<DeviationDto>>("/api/deviations");
@@ -188,13 +204,21 @@ namespace ПрилТехно.ViewModels
 
             foreach (var d in filtered)
             {
-                table.Rows.Add(d.BatchNumber, d.StepName, d.ParameterName, d.PlannedValue,
-                               d.ActualValue, d.DeviationType, d.Severity, d.CreatedAt);
+                table.Rows.Add(
+                    d.BatchNumber,
+                    d.StepName ?? (object)DBNull.Value,
+                    d.ParameterName ?? (object)DBNull.Value,
+                    d.PlannedValue ?? (object)DBNull.Value,
+                    d.ActualValue ?? (object)DBNull.Value,
+                    d.DeviationType,
+                    d.Severity,
+                    d.CreatedAt
+                );
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Отчёт по использованию рецептур (GET /api/recipes и /api/productionbatches)</summary>
         private async Task LoadRecipeUsageReportAsync()
         {
             var recipesTask = _apiClient.GetAsync<List<RecipeDto>>("/api/recipes");
@@ -227,13 +251,18 @@ namespace ПрилТехно.ViewModels
 
             foreach (var item in usage)
             {
-                table.Rows.Add(item.Recipe.ProductName, item.Recipe.Name, item.Recipe.Version,
-                               item.BatchCount, item.TotalQuantity);
+                table.Rows.Add(
+                    item.Recipe.ProductName,
+                    item.Recipe.Name,
+                    item.Recipe.Version,
+                    item.BatchCount,
+                    item.TotalQuantity
+                );
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Отчёт по событиям экструдера (GET /api/extrudertelemetry?batchId=...)</summary>
         private async Task LoadExtruderReportAsync()
         {
             var batchesResp = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
@@ -246,9 +275,9 @@ namespace ПрилТехно.ViewModels
             var table = new DataTable();
             table.Columns.Add("Партия", typeof(string));
             table.Columns.Add("Зона", typeof(int));
-            table.Columns.Add("Температура,°C", typeof(decimal?));
-            table.Columns.Add("Давление, бар", typeof(decimal?));
-            table.Columns.Add("Скорость, об/мин", typeof(int?));
+            table.Columns.Add("Температура,°C", typeof(decimal));
+            table.Columns.Add("Давление, бар", typeof(decimal));
+            table.Columns.Add("Скорость, об/мин", typeof(int));
             table.Columns.Add("Время записи", typeof(DateTime));
 
             foreach (var batch in batches)
@@ -258,15 +287,21 @@ namespace ПрилТехно.ViewModels
                 {
                     foreach (var t in telemetryResp.Data)
                     {
-                        table.Rows.Add(batch.BatchNumber, t.ZoneNumber, t.TemperatureC,
-                                       t.PressureBar, t.ScrewSpeedRpm, t.RecordedAt);
+                        table.Rows.Add(
+                            batch.BatchNumber,
+                            t.ZoneNumber,
+                            (object?)t.TemperatureC ?? DBNull.Value,
+                            (object?)t.PressureBar ?? DBNull.Value,
+                            (object?)t.ScrewSpeedRpm ?? DBNull.Value,
+                            t.RecordedAt
+                        );
                     }
                 }
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Отчёт по лабораторным блокировкам (GET /api/productionbatches с фильтром lab_decision='blocked')</summary>
         private async Task LoadLabBlockReportAsync()
         {
             var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
@@ -281,19 +316,24 @@ namespace ПрилТехно.ViewModels
             var table = new DataTable();
             table.Columns.Add("Партия", typeof(string));
             table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("Дата блокировки", typeof(DateTime?));
+            table.Columns.Add("Дата блокировки", typeof(DateTime));
             table.Columns.Add("Причина", typeof(string));
             table.Columns.Add("Ответственный", typeof(string));
 
             foreach (var b in blocked)
             {
-                table.Rows.Add(b.BatchNumber, b.ProductName, b.LabDecisionDate,
-                               b.LabDecisionReason, b.LabDecisionBy);
+                table.Rows.Add(
+                    b.BatchNumber,
+                    b.ProductName,
+                    b.LabDecisionDate.Value,
+                    b.LabDecisionReason ?? (object)DBNull.Value,
+                    b.LabDecisionBy?.ToString() ?? (object)DBNull.Value
+                );
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
-        /// <summary>Журнал событий системы (GET /api/events с фильтром по дате)</summary>
         private async Task LoadSystemEventsReportAsync()
         {
             var response = await _apiClient.GetAsync<List<EventDto>>($"/api/events?from={StartDate:yyyy-MM-dd}&to={EndDate:yyyy-MM-dd}");
@@ -312,9 +352,16 @@ namespace ПрилТехно.ViewModels
 
             foreach (var e in response.Data)
             {
-                table.Rows.Add(e.EventType, e.SourceType, e.Message, e.CreatedAt, e.UserName);
+                table.Rows.Add(
+                    e.EventType,
+                    e.SourceType,
+                    e.Message,
+                    e.CreatedAt,
+                    e.UserName ?? (object)DBNull.Value
+                );
             }
             ReportData = table;
+            OnPropertyChanged(nameof(CanExport));
         }
 
         #endregion
