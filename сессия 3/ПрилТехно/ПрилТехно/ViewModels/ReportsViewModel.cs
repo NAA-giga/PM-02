@@ -1,30 +1,38 @@
-﻿using ClosedXML.Excel;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ПрилТехно.Models;
+using ClosedXML.Excel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
+using ПрилТехно.Repositories;
 using ПрилТехно.Services;
 
 namespace ПрилТехно.ViewModels
 {
+    // Определения классов-строк (можно вынести в отдельные файлы)
+    public class OrdersReportRow { /* ... как ранее */ }
+    public class BatchesReportRow { /* ... */ }
+    public class DeviationsReportRow { /* ... */ }
+    public class RecipeUsageReportRow { /* ... */ }
+    public class ExtruderReportRow { /* ... */ }
+    public class LabBlockedReportRow { /* ... */ }
+    public class SystemEventsReportRow { /* ... */ }
+
     public partial class ReportsViewModel : ObservableObject
     {
-        private readonly ApiClient _apiClient;
+        private readonly IReportRepository _reportRepository;
         private readonly IDialogService _dialogService;
 
-        // Константы для типов отчётов
+        private const string ReportOrders = "Отчёт по заказам";
         private const string ReportBatches = "Отчёт по партиям за период";
         private const string ReportDeviations = "Отчёт по отклонениям";
         private const string ReportRecipeUsage = "Отчёт по использованию рецептур";
         private const string ReportExtruder = "Отчёт по событиям экструдера";
         private const string ReportLabBlocks = "Отчёт по лабораторным блокировкам";
+        private const string ReportSystemEvents = "Журнал событий системы";
 
         [ObservableProperty]
         private string? _selectedReport;
@@ -36,19 +44,20 @@ namespace ПрилТехно.ViewModels
         private DateTime _endDate = DateTime.Now;
 
         [ObservableProperty]
-        private DataTable? _reportData;
+        private IEnumerable<object>? _reportData;
 
         [ObservableProperty]
         private bool _isLoading;
+
         public bool IsNotLoading => !IsLoading;
-        public bool CanExport => ReportData != null && ReportData.Rows.Count > 0;
+        public bool CanExport => ReportData != null && ReportData.Any();
 
         public ICommand GenerateReportCommand { get; }
         public ICommand ExportCommand { get; }
 
-        public ReportsViewModel(ApiClient apiClient, IDialogService dialogService)
+        public ReportsViewModel(IReportRepository reportRepository, IDialogService dialogService)
         {
-            _apiClient = apiClient;
+            _reportRepository = reportRepository;
             _dialogService = dialogService;
             GenerateReportCommand = new AsyncRelayCommand(GenerateReportAsync);
             ExportCommand = new AsyncRelayCommand(ExportAsync);
@@ -63,34 +72,42 @@ namespace ПрилТехно.ViewModels
             }
 
             IsLoading = true;
+            OnPropertyChanged(nameof(IsNotLoading));
             try
             {
                 switch (SelectedReport)
                 {
+                    case ReportOrders:
+                        ReportData = await Task.Run(() => _reportRepository.GetOrdersReport(StartDate, EndDate));
+                        break;
                     case ReportBatches:
-                        await LoadBatchReportAsync();
+                        ReportData = await Task.Run(() => _reportRepository.GetBatchesReport(StartDate, EndDate));
                         break;
                     case ReportDeviations:
-                        await LoadDeviationReportAsync();
+                        ReportData = await Task.Run(() => _reportRepository.GetDeviationsReport(StartDate, EndDate));
                         break;
                     case ReportRecipeUsage:
-                        await LoadRecipeUsageReportAsync();
+                        ReportData = await Task.Run(() => _reportRepository.GetRecipeUsageReport());
                         break;
                     case ReportExtruder:
-                        await LoadExtruderReportAsync();
+                        ReportData = await Task.Run(() => _reportRepository.GetExtruderReport(StartDate, EndDate));
                         break;
                     case ReportLabBlocks:
-                        await LoadLabBlockReportAsync();
+                        ReportData = await Task.Run(() => _reportRepository.GetLabBlockedReport(StartDate, EndDate));
+                        break;
+                    case ReportSystemEvents:
+                        ReportData = await Task.Run(() => _reportRepository.GetSystemEventsReport(StartDate, EndDate));
                         break;
                     default:
-                        System.Diagnostics.Debug.WriteLine($"Выбран отчёт: '{SelectedReport}'");
                         _dialogService.ShowMessage("Неизвестный тип отчёта");
+                        ReportData = null;
                         break;
                 }
             }
             catch (Exception ex)
             {
                 _dialogService.ShowMessage($"Ошибка: {ex.Message}");
+                ReportData = null;
             }
             finally
             {
@@ -100,277 +117,9 @@ namespace ПрилТехно.ViewModels
             }
         }
 
-        #region Загрузка данных из API
-
-        private async Task LoadOrdersReportAsync()
-        {
-            var response = await _apiClient.GetAsync<List<ProductionOrderDto>>("/api/productionorders");
-            if (response?.IsSuccess != true || response.Data == null)
-            {
-                _dialogService.ShowMessage("Не удалось загрузить заказы");
-                return;
-            }
-
-            var filtered = response.Data
-                .Where(o => o.PlannedStartDate.Date >= StartDate.Date && o.PlannedStartDate.Date <= EndDate.Date)
-                .OrderBy(o => o.PlannedStartDate)
-                .ToList();
-
-            var table = new DataTable();
-            table.Columns.Add("Номер заказа", typeof(string));
-            table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("План, кг", typeof(decimal));
-            table.Columns.Add("Статус", typeof(string));
-            table.Columns.Add("Плановая дата", typeof(DateTime));
-            table.Columns.Add("Факт. начало", typeof(DateTime));
-            table.Columns.Add("Факт. конец", typeof(DateTime));
-
-            foreach (var order in filtered)
-            {
-                table.Rows.Add(
-                    order.OrderNumber,
-                    order.ProductName,
-                    order.PlannedQuantityKg,
-                    order.Status,
-                    order.PlannedStartDate,
-                    (object?)order.ActualStartDate ?? DBNull.Value,
-                    (object?)order.ActualEndDate ?? DBNull.Value
-                );
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadBatchReportAsync()
-        {
-            System.Diagnostics.Debug.WriteLine($"StartDate: {StartDate:yyyy-MM-dd}, EndDate: {EndDate:yyyy-MM-dd}");
-            var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
-            if (response?.IsSuccess != true || response.Data == null)
-            {
-                _dialogService.ShowMessage("Не удалось загрузить партии");
-                return;
-            }
-
-            var filtered = response.Data.ToList(); // можно вернуть фильтрацию позже
-
-            System.Diagnostics.Debug.WriteLine($"Найдено партий: {filtered.Count}");
-            if (filtered.Count == 0)
-            {
-                _dialogService.ShowMessage("Нет партий за выбранный период");
-                return;
-            }
-
-            var table = new DataTable();
-            table.Columns.Add("НомерПартии", typeof(string));
-            table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("ДатаЗапуска", typeof(DateTime));
-            table.Columns.Add("Статус", typeof(string));
-            table.Columns.Add("ПланКг", typeof(decimal));
-            table.Columns.Add("ФактКг", typeof(decimal));
-            table.Columns.Add("ЛабРешение", typeof(string));
-
-            foreach (var b in filtered)
-            {
-                Debug.WriteLine($"Batch: '{b.BatchNumber}', Product: '{b.ProductName}', Plan: {b.PlannedQuantityKg}, Start: {b.StartTime}");
-            }
-
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadDeviationReportAsync()
-        {
-            var response = await _apiClient.GetAsync<List<DeviationDto>>("/api/deviations");
-            if (response?.IsSuccess != true || response.Data == null)
-            {
-                _dialogService.ShowMessage("Не удалось загрузить отклонения");
-                return;
-            }
-
-            var filtered = response.Data
-                .Where(d => d.CreatedAt.Date >= StartDate.Date && d.CreatedAt.Date <= EndDate.Date)
-                .OrderBy(d => d.CreatedAt)
-                .ToList();
-
-            var table = new DataTable();
-            table.Columns.Add("Партия", typeof(string));
-            table.Columns.Add("Шаг", typeof(string));
-            table.Columns.Add("Параметр", typeof(string));
-            table.Columns.Add("План", typeof(string));
-            table.Columns.Add("Факт", typeof(string));
-            table.Columns.Add("Тип", typeof(string));
-            table.Columns.Add("Серьёзность", typeof(string));
-            table.Columns.Add("Дата", typeof(DateTime));
-
-            foreach (var d in filtered)
-            {
-                table.Rows.Add(
-                    d.BatchNumber,
-                    d.StepName ?? (object)DBNull.Value,
-                    d.ParameterName ?? (object)DBNull.Value,
-                    d.PlannedValue ?? (object)DBNull.Value,
-                    d.ActualValue ?? (object)DBNull.Value,
-                    d.DeviationType,
-                    d.Severity,
-                    d.CreatedAt
-                );
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadRecipeUsageReportAsync()
-        {
-            var recipesTask = _apiClient.GetAsync<List<RecipeDto>>("/api/recipes");
-            var batchesTask = _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
-            await Task.WhenAll(recipesTask, batchesTask);
-
-            var recipes = recipesTask.Result?.Data ?? new List<RecipeDto>();
-            var batches = batchesTask.Result?.Data ?? new List<ProductionBatchDto>();
-
-            var usage = batches
-                .Where(b => b.Status == "completed" || b.Status == "quality_control")
-                .GroupBy(b => b.RecipeId)
-                .Select(g => new
-                {
-                    RecipeId = g.Key,
-                    Recipe = recipes.FirstOrDefault(r => r.Id == g.Key),
-                    BatchCount = g.Count(),
-                    TotalQuantity = g.Sum(b => b.ActualQuantityKg ?? 0)
-                })
-                .Where(x => x.Recipe != null)
-                .OrderBy(x => x.Recipe.ProductName)
-                .ToList();
-
-            var table = new DataTable();
-            table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("Рецептура", typeof(string));
-            table.Columns.Add("Версия", typeof(int));
-            table.Columns.Add("Кол-во партий", typeof(int));
-            table.Columns.Add("Объём, кг", typeof(decimal));
-
-            foreach (var item in usage)
-            {
-                table.Rows.Add(
-                    item.Recipe.ProductName,
-                    item.Recipe.Name,
-                    item.Recipe.Version,
-                    item.BatchCount,
-                    item.TotalQuantity
-                );
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadExtruderReportAsync()
-        {
-            var batchesResp = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
-            if (batchesResp?.IsSuccess != true || batchesResp.Data == null) return;
-
-            var batches = batchesResp.Data
-                .Where(b => b.StartTime.HasValue && b.StartTime.Value.Date >= StartDate.Date && b.StartTime.Value.Date <= EndDate.Date)
-                .ToList();
-
-            var table = new DataTable();
-            table.Columns.Add("Партия", typeof(string));
-            table.Columns.Add("Зона", typeof(int));
-            table.Columns.Add("Температура,°C", typeof(decimal));
-            table.Columns.Add("Давление, бар", typeof(decimal));
-            table.Columns.Add("Скорость, об/мин", typeof(int));
-            table.Columns.Add("Время записи", typeof(DateTime));
-
-            foreach (var batch in batches)
-            {
-                var telemetryResp = await _apiClient.GetAsync<List<ExtruderTelemetryDto>>($"/api/extrudertelemetry?batchId={batch.Id}");
-                if (telemetryResp?.IsSuccess == true && telemetryResp.Data != null)
-                {
-                    foreach (var t in telemetryResp.Data)
-                    {
-                        table.Rows.Add(
-                            batch.BatchNumber,
-                            t.ZoneNumber,
-                            (object?)t.TemperatureC ?? DBNull.Value,
-                            (object?)t.PressureBar ?? DBNull.Value,
-                            (object?)t.ScrewSpeedRpm ?? DBNull.Value,
-                            t.RecordedAt
-                        );
-                    }
-                }
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadLabBlockReportAsync()
-        {
-            var response = await _apiClient.GetAsync<List<ProductionBatchDto>>("/api/productionbatches");
-            if (response?.IsSuccess != true || response.Data == null) return;
-
-            var blocked = response.Data
-                .Where(b => b.LabDecision == "blocked" && b.LabDecisionDate.HasValue &&
-                            b.LabDecisionDate.Value.Date >= StartDate.Date && b.LabDecisionDate.Value.Date <= EndDate.Date)
-                .OrderBy(b => b.LabDecisionDate)
-                .ToList();
-
-            var table = new DataTable();
-            table.Columns.Add("Партия", typeof(string));
-            table.Columns.Add("Продукт", typeof(string));
-            table.Columns.Add("Дата блокировки", typeof(DateTime));
-            table.Columns.Add("Причина", typeof(string));
-            table.Columns.Add("Ответственный", typeof(string));
-
-            foreach (var b in blocked)
-            {
-                table.Rows.Add(
-                    b.BatchNumber,
-                    b.ProductName,
-                    b.LabDecisionDate.Value,
-                    b.LabDecisionReason ?? (object)DBNull.Value,
-                    b.LabDecisionBy?.ToString() ?? (object)DBNull.Value
-                );
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        private async Task LoadSystemEventsReportAsync()
-        {
-            var response = await _apiClient.GetAsync<List<EventDto>>($"/api/events?from={StartDate:yyyy-MM-dd}&to={EndDate:yyyy-MM-dd}");
-            if (response?.IsSuccess != true || response.Data == null)
-            {
-                _dialogService.ShowMessage("Не удалось загрузить события");
-                return;
-            }
-
-            var table = new DataTable();
-            table.Columns.Add("Тип", typeof(string));
-            table.Columns.Add("Источник", typeof(string));
-            table.Columns.Add("Сообщение", typeof(string));
-            table.Columns.Add("Дата", typeof(DateTime));
-            table.Columns.Add("Пользователь", typeof(string));
-
-            foreach (var e in response.Data)
-            {
-                table.Rows.Add(
-                    e.EventType,
-                    e.SourceType,
-                    e.Message,
-                    e.CreatedAt,
-                    e.UserName ?? (object)DBNull.Value
-                );
-            }
-            ReportData = table;
-            OnPropertyChanged(nameof(CanExport));
-        }
-
-        #endregion
-
-        #region Экспорт в Excel
-
         private async Task ExportAsync()
         {
-            if (ReportData == null || ReportData.Rows.Count == 0)
+            if (ReportData == null || !ReportData.Any())
             {
                 _dialogService.ShowMessage("Нет данных для экспорта");
                 return;
@@ -386,19 +135,35 @@ namespace ПрилТехно.ViewModels
 
             try
             {
-                using var workbook = new XLWorkbook();
-                var worksheet = workbook.Worksheets.Add("Отчёт");
-                worksheet.Cell(1, 1).InsertTable(ReportData);
-                worksheet.Columns().AdjustToContents();
-                workbook.SaveAs(saveDialog.FileName);
-                _dialogService.ShowMessage($"Отчёт сохранён: {saveDialog.FileName}");
+                await Task.Run(() =>
+                {
+                    using var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Отчёт");
+                    var firstRow = ReportData.First();
+                    var props = firstRow.GetType().GetProperties();
+
+                    for (int i = 0; i < props.Length; i++)
+                        worksheet.Cell(1, i + 1).Value = props[i].Name;
+
+                    int row = 2;
+                    foreach (var item in ReportData)
+                    {
+                        for (int i = 0; i < props.Length; i++)
+                        {
+                            var val = props[i].GetValue(item);
+                            worksheet.Cell(row, i + 1).Value = val?.ToString() ?? "";
+                        }
+                        row++;
+                    }
+                    worksheet.Columns().AdjustToContents();
+                    workbook.SaveAs(saveDialog.FileName);
+                });
+                _dialogService.ShowMessage($"Экспорт завершён: {saveDialog.FileName}");
             }
             catch (Exception ex)
             {
                 _dialogService.ShowMessage($"Ошибка экспорта: {ex.Message}");
             }
         }
-
-        #endregion
     }
 }

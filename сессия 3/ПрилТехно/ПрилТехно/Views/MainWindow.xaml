@@ -37,8 +37,8 @@
                 <StackPanel Margin="10">
                     <!-- Фото пользователя (заглушка) -->
                     <Border CornerRadius="50" Width="80" Height="80" Background="LightGray" Margin="0,20,0,10" HorizontalAlignment="Center">
-                        <Image Source="{Binding UserPhotoBase64, Converter={StaticResource Base64ToImageConverter}}" 
-                               Width="80" Height="80" Stretch="UniformToFill"/>
+                        <Image Source="{Binding UserPhotoBase64, Converter={StaticResource Base64ToImageConverter}}"
+                        Width="80" Height="80" Stretch="UniformToFill"/>
                     </Border>
                     <TextBlock Text="{Binding UserFullName}" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
                     <TextBlock Text="{Binding UserRole}" Foreground="#BDC3C7" HorizontalAlignment="Center" FontSize="12" Margin="0,0,0,20"/>

@@ -1,8 +1,13 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Dapper;
 using ПрилТехно.Models;
+using ПрилТехно.Repositories;
 using ПрилТехно.Services;
 using ПрилТехно.Views;
 
@@ -10,8 +15,10 @@ namespace ПрилТехно.ViewModels
 {
     public partial class RecipeEditViewModel : ObservableObject
     {
-        private readonly ApiClient _apiClient;
+        private readonly IRecipeRepository _recipeRepository;
+        private readonly IDbConnectionFactory _connectionFactory;
         private readonly IDialogService _dialogService;
+        private readonly IAuthService _authService;
         private readonly int? _recipeId;
 
         [ObservableProperty]
@@ -36,7 +43,7 @@ namespace ПрилТехно.ViewModels
         private bool _isLoading;
 
         [ObservableProperty]
-        private bool _isProductSelectable = true; // для новой рецептуры можно выбрать продукт, при редактировании - нельзя
+        private bool _isProductSelectable = true;
 
         public ICommand SaveCommand { get; }
         public ICommand CancelCommand { get; }
@@ -46,10 +53,17 @@ namespace ПрилТехно.ViewModels
 
         public event EventHandler? CloseRequest;
 
-        public RecipeEditViewModel(ApiClient apiClient, IDialogService dialogService, int? recipeId = null)
+        public RecipeEditViewModel(
+            IRecipeRepository recipeRepository,
+            IDbConnectionFactory connectionFactory,
+            IDialogService dialogService,
+            IAuthService authService,
+            int? recipeId = null)
         {
-            _apiClient = apiClient;
+            _recipeRepository = recipeRepository;
+            _connectionFactory = connectionFactory;
             _dialogService = dialogService;
+            _authService = authService;
             _recipeId = recipeId;
 
             SaveCommand = new AsyncRelayCommand(SaveAsync);
@@ -66,33 +80,26 @@ namespace ПрилТехно.ViewModels
             IsLoading = true;
             try
             {
-                // Загружаем список продуктов для выбора
-                var productsResponse = await _apiClient.GetAsync<List<ProductDto>>("/api/reference/products");
-                if (productsResponse?.IsSuccess == true && productsResponse.Data != null)
-                {
-                    Products = new ObservableCollection<ProductDto>(productsResponse.Data);
-                }
-
-                // Загружаем список сырья для выбора в компонентах (хранится в сервисе или отдельно)
-                // Для компонентов нам нужны все активные материалы – загружаем их в статическое поле или прямо здесь.
-                // Лучше загружать отдельно при открытии окна компонента.
+                // Загружаем список активных продуктов
+                using var conn = _connectionFactory.CreateConnection();
+                var products = await conn.QueryAsync<ProductDto>(
+                    "SELECT id, code, name, product_type, form_type, status FROM products WHERE status = 'active'");
+                Products = new ObservableCollection<ProductDto>(products);
 
                 if (_recipeId.HasValue)
                 {
-                    // Режим редактирования
-                    var recipeResponse = await _apiClient.GetAsync<RecipeDto>($"/api/recipes/{_recipeId}");
-                    if (recipeResponse?.IsSuccess == true && recipeResponse.Data != null)
+                    var recipe = await _recipeRepository.GetRecipeByIdAsync(_recipeId.Value);
+                    if (recipe != null)
                     {
-                        var recipe = recipeResponse.Data;
                         SelectedProduct = Products.FirstOrDefault(p => p.Id == recipe.ProductId);
                         RecipeName = recipe.Name;
                         RecipeVersion = recipe.Version;
                         Components = new ObservableCollection<RecipeComponentDto>(recipe.Components);
-                        IsProductSelectable = false; // продукт нельзя менять у существующей рецептуры
+                        IsProductSelectable = false;
                     }
                     else
                     {
-                        _dialogService.ShowMessage("Не удалось загрузить рецептуру", "Ошибка");
+                        _dialogService.ShowMessage("Рецептура не найдена", "Ошибка");
                         CloseRequest?.Invoke(this, EventArgs.Empty);
                         return;
                     }
@@ -109,15 +116,69 @@ namespace ПрилТехно.ViewModels
             }
         }
 
-        private async Task AddComponentAsync()
+        private async Task SaveAsync()
         {
-            var materials = await LoadRawMaterialsAsync();
-            if (!materials.Any())
+            if (string.IsNullOrWhiteSpace(RecipeName))
             {
-                _dialogService.ShowMessage("Нет доступного сырья для выбора", "Ошибка");
+                _dialogService.ShowMessage("Укажите название рецептуры", "Ошибка");
                 return;
             }
-            var vm = new ComponentEditViewModel(materials);
+            if (!_recipeId.HasValue && SelectedProduct == null)
+            {
+                _dialogService.ShowMessage("Выберите продукт", "Ошибка");
+                return;
+            }
+            if (Components.Count == 0)
+            {
+                _dialogService.ShowMessage("Добавьте хотя бы один компонент", "Ошибка");
+                return;
+            }
+
+            var total = Components.Sum(c => c.Percentage);
+            if (Math.Abs(total - 100) > 0.01m)
+            {
+                _dialogService.ShowMessage($"Сумма процентов должна быть 100%, сейчас {total}%", "Ошибка");
+                return;
+            }
+
+            var recipeDto = new RecipeDto
+            {
+                Id = _recipeId ?? 0,
+                ProductId = SelectedProduct!.Id,
+                ProductName = SelectedProduct.Name,
+                Version = _recipeId.HasValue ? RecipeVersion : 0, // для новой рецептуры версия будет вычислена в репозитории
+                Name = RecipeName,
+                Status = "draft",
+                CreatedBy = _authService.CurrentUser!.Id,
+                Components = Components.ToList()
+            };
+
+            IsLoading = true;
+            try
+            {
+                if (_recipeId.HasValue)
+                    await _recipeRepository.UpdateRecipeAsync(recipeDto);
+                else
+                    await _recipeRepository.CreateRecipeAsync(recipeDto);
+                CloseRequest?.Invoke(this, EventArgs.Empty);
+            }
+            catch (Exception ex)
+            {
+                _dialogService.ShowMessage($"Ошибка сохранения: {ex.Message}", "Ошибка");
+            }
+            finally
+            {
+                IsLoading = false;
+            }
+        }
+
+        private async Task AddComponentAsync()
+        {
+            // Загружаем сырьё для выбора в компоненте
+            using var conn = _connectionFactory.CreateConnection();
+            var materials = await conn.QueryAsync<RawMaterialDto>(
+                "SELECT id, code, name, category, unit_of_measure FROM raw_materials WHERE is_active = 1 ORDER BY name");
+            var vm = new ComponentEditViewModel(materials.ToList());
             var win = new ComponentEditView(vm);
             if (win.ShowDialog() == true && vm.Component != null)
             {
@@ -129,8 +190,10 @@ namespace ПрилТехно.ViewModels
         private async Task EditComponentAsync(RecipeComponentDto? component)
         {
             if (component == null) return;
-            var materials = await LoadRawMaterialsAsync();
-            var vm = new ComponentEditViewModel(materials, component);
+            using var conn = _connectionFactory.CreateConnection();
+            var materials = await conn.QueryAsync<RawMaterialDto>(
+                "SELECT id, code, name, category, unit_of_measure FROM raw_materials WHERE is_active = 1 ORDER BY name");
+            var vm = new ComponentEditViewModel(materials.ToList(), component);
             var win = new ComponentEditView(vm);
             if (win.ShowDialog() == true && vm.Component != null)
             {
@@ -146,122 +209,10 @@ namespace ПрилТехно.ViewModels
             if (_dialogService.ShowConfirmation($"Удалить компонент '{component.RawMaterialName}'?", "Подтверждение"))
             {
                 Components.Remove(component);
-                // Перенумеровать LoadOrder
+                // Перенумеровать порядок загрузки
                 for (int i = 0; i < Components.Count; i++)
                     Components[i].LoadOrder = i + 1;
             }
-        }
-
-        private async Task SaveAsync()
-        {
-            if (string.IsNullOrWhiteSpace(RecipeName))
-            {
-                _dialogService.ShowMessage("Укажите название рецептуры", "Ошибка");
-                return;
-            }
-            if (SelectedProduct == null && !_recipeId.HasValue)
-            {
-                _dialogService.ShowMessage("Выберите продукт", "Ошибка");
-                return;
-            }
-            if (Components.Count == 0)
-            {
-                _dialogService.ShowMessage("Добавьте хотя бы один компонент", "Ошибка");
-                return;
-            }
-
-            // Проверка суммы процентов
-            var total = Components.Sum(c => c.Percentage);
-            if (Math.Abs(total - 100) > 0.01m)
-            {
-                _dialogService.ShowMessage($"Сумма компонентов должна быть 100%, сейчас {total}%", "Ошибка");
-                return;
-            }
-
-            // Формируем объект для отправки
-            object payload;
-            string url;
-            if (_recipeId.HasValue)
-            {
-                url = $"/api/recipes/{_recipeId}";
-                payload = new { name = RecipeName }; // обновляем только название
-                // компоненты обновляются отдельными запросами? Упростим: сначала удалим старые, потом добавим новые.
-                // Однако API поддерживает отдельные методы для компонентов, поэтому лучше отправлять компоненты по одному.
-                // Для упрощения в рамках спринта можно создать метод PUT /api/recipes/{id}/components (перезапись всех компонентов).
-                // Но мы воспользуемся существующими методами: удалим все старые компоненты и добавим новые.
-                // Для этого нужно получить список id старых компонентов и удалить их.
-            }
-            else
-            {
-                url = "/api/recipes";
-                payload = new
-                {
-                    productId = SelectedProduct!.Id,
-                    name = RecipeName
-                    // version не передаём – сервер сам вычислит
-                };
-            }
-
-            try
-            {
-                IsLoading = true;
-                ApiResponse<object>? response;
-                if (_recipeId.HasValue)
-                    response = await _apiClient.PutAsync<object>(url, payload);
-                else
-                    response = await _apiClient.PostAsync<object>(url, payload);
-
-                if (response?.IsSuccess != true)
-                {
-                    _dialogService.ShowMessage(response?.ErrorMessage ?? "Ошибка сохранения рецептуры", "Ошибка");
-                    return;
-                }
-
-                int recipeId = _recipeId ?? (int)response.Data?.GetType().GetProperty("Id")?.GetValue(response.Data, null);
-
-                // Сохраняем компоненты (сначала удаляем старые, если редактирование)
-                if (_recipeId.HasValue)
-                {
-                    // Получаем текущие компоненты из API и удаляем их
-                    var existing = await _apiClient.GetAsync<RecipeDto>($"/api/recipes/{recipeId}");
-                    if (existing?.IsSuccess == true && existing.Data != null)
-                    {
-                        foreach (var comp in existing.Data.Components)
-                        {
-                            await _apiClient.DeleteAsync<object>($"/api/recipes/components/{comp.Id}");
-                        }
-                    }
-                }
-                // Добавляем новые компоненты
-                foreach (var comp in Components)
-                {
-                    var compPayload = new
-                    {
-                        rawMaterialId = comp.RawMaterialId,
-                        percentage = comp.Percentage,
-                        loadOrder = comp.LoadOrder,
-                        toleranceMin = comp.ToleranceMin,
-                        toleranceMax = comp.ToleranceMax
-                    };
-                    await _apiClient.PostAsync<object>($"/api/recipes/{recipeId}/components", compPayload);
-                }
-
-                CloseRequest?.Invoke(this, EventArgs.Empty);
-            }
-            catch (Exception ex)
-            {
-                _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка");
-            }
-            finally
-            {
-                IsLoading = false;
-            }
-        }
-
-        private async Task<List<RawMaterialDto>> LoadRawMaterialsAsync()
-        {
-            var response = await _apiClient.GetAsync<List<RawMaterialDto>>("/api/reference/materials");
-            return response?.IsSuccess == true && response.Data != null ? response.Data : new List<RawMaterialDto>();
         }
     }
 }

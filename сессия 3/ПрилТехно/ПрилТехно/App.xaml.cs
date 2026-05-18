@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using ПрилТехно.Services;
 using ПрилТехно.ViewModels;
 using ПрилТехно.Views;
+using ПрилТехно.Repositories;
 using INavigationService = ПрилТехно.Services.INavigationService;
 using NavigationService = ПрилТехно.Services.NavigationService;
 
@@ -26,6 +27,9 @@ namespace ПрилТехно
                 base.OnStartup(e);
 
                 var services = new ServiceCollection();
+                var connectionString = ConfigurationManager.ConnectionStrings["ManufacturingDB"].ConnectionString;
+                services.AddSingleton<IDbConnectionFactory>(new SqlConnectionFactory(connectionString));
+                services.AddScoped<IReportRepository, ReportRepository>();
 
                 // HTTP клиент с базовым адресом API
                 var httpClient = new HttpClient
@@ -35,6 +39,7 @@ namespace ПрилТехно
                 };
                 services.AddSingleton(httpClient);          // один HttpClient на всё приложение
                 services.AddSingleton<ApiClient>();
+
 
                 // Регистрация сервисов
                 services.AddSingleton<IAuthService, AuthService>();
@@ -62,6 +67,10 @@ namespace ПрилТехно
                 services.AddTransient<TechCardEditView>();
                 services.AddTransient<StepEditViewModel>();
 
+                services.AddScoped<IRecipeRepository, RecipeRepository>();
+                services.AddTransient<RecipesView>();
+                services.AddTransient<RecipeEditView>();
+                services.AddTransient<ComponentEditView>();
                 // Views (singleton для окон)
                 services.AddTransient<LoginView>();
                 services.AddTransient<MainWindow>();

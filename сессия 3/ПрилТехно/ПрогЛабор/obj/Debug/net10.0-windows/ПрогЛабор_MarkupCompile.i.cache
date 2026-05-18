@@ -1,0 +1,20 @@
+﻿ПрогЛабор
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\
+ПрогЛабор
+none
+false
+TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\App.xaml
+6-1029167718
+
+42714511426
+24642942817
+Views\LabDecisionView.xaml;Views\MainWindow.xaml;Views\ProductBatchesView.xaml;Views\QualityTestView.xaml;Views\RawMaterialBatchesView.xaml;Views\RawMaterialTestView.xaml;
+
+False
+

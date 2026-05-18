@@ -1,0 +1,15 @@
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\ПрогЛабор.csproj.AssemblyReference.cache
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\LabDecisionView.baml
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\ProductBatchesView.baml
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\QualityTestView.baml
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\RawMaterialBatchesView.baml
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\RawMaterialTestView.baml
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\LabDecisionView.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\MainWindow.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\ProductBatchesView.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\QualityTestView.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\RawMaterialBatchesView.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\Views\RawMaterialTestView.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\App.g.cs
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\ПрогЛабор_MarkupCompile.cache
+C:\23П-2\PM-02\сессия 3\ПрилТехно\ПрогЛабор\obj\Debug\net10.0-windows\ПрогЛабор_MarkupCompile.lref

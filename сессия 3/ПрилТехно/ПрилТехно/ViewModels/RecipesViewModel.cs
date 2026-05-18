@@ -1,16 +1,22 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using ПрилТехно.Models;
+using ПрилТехно.Repositories;
 using ПрилТехно.Services;
 using ПрилТехно.Views;
+
 namespace ПрилТехно.ViewModels
 {
     public partial class RecipesViewModel : ObservableObject
     {
-        private readonly ApiClient _apiClient;
+        private readonly IRecipeRepository _recipeRepository;
+        private readonly IDbConnectionFactory _connectionFactory;
         private readonly IDialogService _dialogService;
+        private readonly IAuthService _authService;
 
         [ObservableProperty]
         private ObservableCollection<RecipeDto> _recipes = new();
@@ -25,10 +31,16 @@ namespace ПрилТехно.ViewModels
         public ICommand ArchiveRecipeCommand { get; }
         public ICommand RefreshCommand { get; }
 
-        public RecipesViewModel(ApiClient apiClient, IDialogService dialogService)
+        public RecipesViewModel(
+            IRecipeRepository recipeRepository,
+            IDbConnectionFactory connectionFactory,
+            IDialogService dialogService,
+            IAuthService authService)
         {
-            _apiClient = apiClient;
+            _recipeRepository = recipeRepository;
+            _connectionFactory = connectionFactory;
             _dialogService = dialogService;
+            _authService = authService;
 
             LoadRecipesCommand = new AsyncRelayCommand(LoadRecipesAsync);
             CreateRecipeCommand = new AsyncRelayCommand(CreateRecipeAsync);
@@ -43,19 +55,22 @@ namespace ПрилТехно.ViewModels
             IsLoading = true;
             try
             {
-                var response = await _apiClient.GetAsync<List<RecipeDto>>("/api/recipes");
-                if (response?.IsSuccess == true && response.Data != null)
-                    Recipes = new ObservableCollection<RecipeDto>(response.Data);
-                else
-                    _dialogService.ShowMessage(response?.ErrorMessage ?? "Ошибка загрузки", "Ошибка");
+                var list = await _recipeRepository.GetAllRecipesAsync();
+                Recipes = new ObservableCollection<RecipeDto>(list);
             }
-            catch (Exception ex) { _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка"); }
-            finally { IsLoading = false; }
+            catch (Exception ex)
+            {
+                _dialogService.ShowMessage($"Ошибка загрузки рецептур: {ex.Message}");
+            }
+            finally
+            {
+                IsLoading = false;
+            }
         }
 
         private async Task CreateRecipeAsync()
         {
-            var editVm = new RecipeEditViewModel(_apiClient, _dialogService);
+            var editVm = new RecipeEditViewModel(_recipeRepository, _connectionFactory, _dialogService, _authService);
             var editWindow = new RecipeEditView(editVm);
             if (editWindow.ShowDialog() == true)
                 await LoadRecipesAsync();
@@ -64,7 +79,7 @@ namespace ПрилТехно.ViewModels
         private async Task EditRecipeAsync(RecipeDto? recipe)
         {
             if (recipe == null) return;
-            var editVm = new RecipeEditViewModel(_apiClient, _dialogService, recipe.Id);
+            var editVm = new RecipeEditViewModel(_recipeRepository, _connectionFactory, _dialogService, _authService, recipe.Id);
             var editWindow = new RecipeEditView(editVm);
             if (editWindow.ShowDialog() == true)
                 await LoadRecipesAsync();
@@ -77,13 +92,20 @@ namespace ПрилТехно.ViewModels
                 return;
             try
             {
-                var response = await _apiClient.PostAsync<object>($"/api/recipes/{recipe.Id}/approve", null);
-                if (response?.IsSuccess == true)
+                var success = await _recipeRepository.ApproveRecipeAsync(recipe.Id, _authService.CurrentUser!.Id);
+                if (success)
                     await LoadRecipesAsync();
                 else
-                    _dialogService.ShowMessage(response?.ErrorMessage ?? "Ошибка утверждения", "Ошибка");
+                    _dialogService.ShowMessage("Не удалось утвердить рецептуру", "Ошибка");
             }
-            catch (Exception ex) { _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка"); }
+            catch (InvalidOperationException ex)
+            {
+                _dialogService.ShowMessage(ex.Message, "Ошибка");
+            }
+            catch (Exception ex)
+            {
+                _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка");
+            }
         }
 
         private async Task ArchiveRecipeAsync(RecipeDto? recipe)
@@ -93,13 +115,16 @@ namespace ПрилТехно.ViewModels
                 return;
             try
             {
-                var response = await _apiClient.PostAsync<object>($"/api/recipes/{recipe.Id}/archive", null);
-                if (response?.IsSuccess == true)
+                var success = await _recipeRepository.ArchiveRecipeAsync(recipe.Id);
+                if (success)
                     await LoadRecipesAsync();
                 else
-                    _dialogService.ShowMessage(response?.ErrorMessage ?? "Ошибка архивации", "Ошибка");
+                    _dialogService.ShowMessage("Не удалось архивировать рецептуру", "Ошибка");
             }
-            catch (Exception ex) { _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка"); }
+            catch (Exception ex)
+            {
+                _dialogService.ShowMessage($"Ошибка: {ex.Message}", "Ошибка");
+            }
         }
     }
 }
