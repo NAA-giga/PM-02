@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ПрилТехно/ПрилТехно.csproj" />
+  <Project Path="ПрогЛабор/ПрогЛабор.csproj" Id="0e93f2fa-7607-49b2-a517-67dee1003089" />
+  <Project Path="прогОпер/прогОпер.csproj" Id="ed449152-9b14-4287-81ea-320c03249727" />
+</Solution>

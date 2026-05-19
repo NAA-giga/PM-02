@@ -1,0 +1,37 @@
+﻿<Window x:Class="ПрогЛабор.Views.LabDecisionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Принятие лабораторного решения" Height="300" Width="450"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Выберите решение по партии" FontSize="16" 
+                   FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <RadioButton Grid.Row="1" Content="Разрешить использование" 
+                     IsChecked="{Binding Decision, Converter={StaticResource StringToBoolConverter}, ConverterParameter='approved'}"
+                     GroupName="Decision" Margin="0,5"/>
+        <RadioButton Grid.Row="2" Content="Заблокировать" 
+                     IsChecked="{Binding Decision, Converter={StaticResource StringToBoolConverter}, ConverterParameter='blocked'}"
+                     GroupName="Decision" Margin="0,5"/>
+
+        <StackPanel Grid.Row="3" Margin="0,15">
+            <TextBlock Text="Причина блокировки:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <TextBox Text="{Binding Reason}" Height="60" TextWrapping="Wrap"
+                     IsEnabled="{Binding Decision, Converter={StaticResource IsBlockedConverter}}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20">
+            <Button Content="Подтвердить" Command="{Binding SubmitDecisionCommand}" 
+                    Width="100" Margin="0,0,10,0" Padding="8,3"/>
+            <Button Content="Отмена" Command="{Binding CancelCommand}" Width="100" Padding="8,3"/>
+        </StackPanel>
+    </Grid>
+</Window>

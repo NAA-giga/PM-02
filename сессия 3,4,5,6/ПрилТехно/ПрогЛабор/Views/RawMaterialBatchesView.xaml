@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="ПрогЛабор.Views.RawMaterialBatchesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Поиск и кнопки -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                     Width="200" Margin="0,0,10,0" Height="30" />
+            <Button Content="🔍 Поиск" Command="{Binding LoadBatchesCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Button Content="🔄 Обновить" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
+        </StackPanel>
+
+        <!-- Таблица партий -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Batches}" 
+                  SelectedItem="{Binding SelectedBatch}"
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  CanUserAddRows="False" CanUserDeleteRows="False"
+                  Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер партии" Binding="{Binding BatchNumber}" Width="120"/>
+                <DataGridTextColumn Header="Материал" Binding="{Binding RawMaterialName}" Width="200"/>
+                <DataGridTextColumn Header="Поставщик" Binding="{Binding SupplierName}" Width="150"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="100"/>
+                <DataGridTextColumn Header="Дата поступления" Binding="{Binding ReceiptDate, StringFormat='dd.MM.yyyy'}" Width="120"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding LabStatus}" Width="100">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background" Value="{Binding LabStatus, Converter={StaticResource StatusToColorConverter}}"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Панель действий -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,15,0,0">
+            <Button Content="➕ Новое испытание" 
+            Command="{Binding StartTestCommand}"
+            Height="35" 
+            MinWidth="140"
+            Margin="0,0,15,0" 
+            Padding="12,5"/>
+            <Button Content="📋 Просмотр испытания" 
+            Command="{Binding ViewTestCommand}"
+            Height="35" 
+            MinWidth="140"
+            Margin="0,0,15,0" 
+            Padding="12,5"/>
+            <Button Content="⚖️ Принять решение" 
+            Command="{Binding MakeDecisionCommand}"
+            Height="35" 
+            MinWidth="140"
+            Padding="12,5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="ПрилТехно.Views.ProductEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование продукта" Height="350" Width="450"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Данные продукта" FontSize="16" FontWeight="Bold" Margin="0,0,0,15"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Код:" Width="100"/>
+            <TextBox Text="{Binding Product.Code, UpdateSourceTrigger=PropertyChanged}" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Наименование:" Width="100"/>
+            <TextBox Text="{Binding Product.Name, UpdateSourceTrigger=PropertyChanged}" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Тип:" Width="100"/>
+            <TextBox Text="{Binding Product.ProductType, UpdateSourceTrigger=PropertyChanged}" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Форма выпуска:" Width="100"/>
+            <TextBox Text="{Binding Product.FormType, UpdateSourceTrigger=PropertyChanged}" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20">
+            <Button Content="Сохранить" Command="{Binding SaveCommand}" Width="80" Margin="0,0,10,0"/>
+            <Button Content="Отмена" Command="{Binding CancelCommand}" Width="80"/>
+        </StackPanel>
+    </Grid>
+</Window>
